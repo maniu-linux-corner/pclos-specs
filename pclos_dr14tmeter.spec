@@ -46,5 +46,5 @@ python setup.py install --root=%{buildroot} --prefix=usr --optimize=1
 
 
 %changelog
-* Sat Jun 23 2012 Mank <Mank1@seznam.cz> 0.8.5-1
-- dr1tmeter 0.8.5: Init Packeges for PCLOS
+* Sat Jun 23 2012 Mank <mank@pclinuxos.cz> 0.8.5-1
+- dr1tmeter 0.8.5: Init Packages for pclinuxos

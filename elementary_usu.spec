@@ -40,5 +40,5 @@ cd elementary_usu
 %{iconsdir}/*
 
 %changelog
-* Sat Jul 10 2014 Mank <Mank1@seznam.cz> 8.0.7-3
+* Sat Jul 10 2014 Mank <mank@pclinuxos.cz> 8.0.7-3
 - Update.

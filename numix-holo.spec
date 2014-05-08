@@ -32,6 +32,6 @@ A Complete theme for gtk/xfce
 
 
 %changelog
-* Fri Jul 28 2013 Mank <Mank1@seznam.cz> 1.0.0-1
+* Fri Jul 28 2013 Mank <mank@pclinuxos.cz> 1.0.0-1
 - Init spec
 

@@ -146,5 +146,5 @@ cp $RPM_SOURCE_DIR/README_en-US $RPM_BUILD_ROOT/usr/share/doc/task-lo/
 
 
 %changelog
-* Sat Mar 25 2011 Mank <Mank1@seznam.cz> 3.6-1
+* Sat Mar 25 2011 Mank <mank@pclinuxos.cz> 3.6-1
 - initial task packages

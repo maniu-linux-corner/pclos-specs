@@ -35,5 +35,5 @@ install -m 744 xfcecomped.desktop $RPM_BUILD_ROOT/usr/share/applications/xfcecom
 %{_datadir}/applications/xfcecomped.desktop
 
 %changelog
-* Sat Mar 25 2013 Mank <Mank1@seznam.cz> 2.6.6-3
+* Sat Mar 25 2013 Mank <mank@pclinuxos.cz> 2.6.6-3
 -  init spec

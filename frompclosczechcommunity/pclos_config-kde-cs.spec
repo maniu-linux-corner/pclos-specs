@@ -249,5 +249,5 @@ rm /tmp/en-na-cs-kde.sh
 
 
 %changelog
-* Sat Aug 11 2012 Mank <Mank1@seznam.cz> 1.0.0-1
+* Sat Aug 11 2012 Mank <mank@pclinuxos.cz> 1.0.0-1
 -

@@ -16,5 +16,5 @@ Task for SK Live env
 %files
 
 %changelog
-* Sat Mar 25 2011 Mank <Mank1@seznam.cz> 4.0-1
+* Sat Mar 25 2011 Mank <mank@pclinuxos.cz> 4.0-1
 - initial task packages.

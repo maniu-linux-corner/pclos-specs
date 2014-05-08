@@ -29,8 +29,8 @@ A xfwm4 theme axe
 
 
 %changelog
-* Fri Apr 29 2014 Mank <Mank1@seznam.cz> 1.0.0-2
+* Fri Apr 29 2014 Mank <mank@pclinuxos.cz> 1.0.0-2
 - Init spec
-* Fri Jul 28 2013 Mank <Mank1@seznam.cz> 1.0.0-1
+* Fri Jul 28 2013 Mank <mank@pclinuxos.cz> 1.0.0-1
 - Init spec
 

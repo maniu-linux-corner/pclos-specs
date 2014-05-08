@@ -63,5 +63,5 @@ sed -e "s/#   dos charset = 850/ dos charset = 852/" -e "s/#   unix charset = IS
 %{_datadir}/applications/synaptic-aktualizace-kde.desktop
 
 %changelog
-* Sat Aug 11 2012 Mank <Mank1@seznam.cz> 1.0.0-1
+* Sat Aug 11 2012 Mank <mank@pclinuxos.cz> 1.0.0-1
 -

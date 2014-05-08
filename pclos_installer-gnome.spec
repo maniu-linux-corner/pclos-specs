@@ -16,7 +16,6 @@ A Installer for CZ&SK Community (Gnome Edition)
 %setup
 
 %build
-[ "$RPM_BUILD_ROOT" != "/" ] && rm -rf $RPM_BUILD_ROOT
 mkdir -p $RPM_BUILD_ROOT/usr/
 ./install.sh $RPM_BUILD_ROOT/usr/
 
@@ -33,5 +32,5 @@ mkdir -p $RPM_BUILD_ROOT/usr/
 %{_docdir}/*
 
 %changelog
-* Sat Aug 11 2012 Mank <Mank1@seznam.cz> 1.0.1-2
+* Sat Aug 11 2012 Mank <mank@pclinuxos.cz> 1.0.1-2
 - Installer (Gnome)

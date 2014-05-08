@@ -19,5 +19,5 @@ Task pro CZ KDE
 %files
 
 %changelog
-* Sat Mar 25 2012 Mank <Mank1@seznam.cz> 2.2.0.35-1
+* Sat Mar 25 2012 Mank <mank@pclinuxos.cz> 2.2.0.35-1
 - initial task packages

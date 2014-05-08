@@ -34,5 +34,5 @@ mkdir -p $RPM_BUILD_ROOT/usr/
 %{_docdir}/*
 
 %changelog
-* Sat Mar 25 2013 Mank <Mank1@seznam.cz> 1.0.8-1
+* Sat Mar 25 2013 Mank <mank@pclinuxos.cz> 1.0.8-1
 - Installer

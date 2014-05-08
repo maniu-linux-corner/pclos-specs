@@ -16,7 +16,6 @@ A Screenshots Info Utility
 %setup -n screenFetch
 
 %build
-[ "$RPM_BUILD_ROOT" != "/" ] && rm -rf $RPM_BUILD_ROOT
 
 %install
 mkdir -p $RPM_BUILD_ROOT/usr/bin/
@@ -38,5 +37,5 @@ cp README.mkdn $RPM_BUILD_ROOT/usr/share/doc/screenfetch/README.mkdn
 %{_bindir}/screenfetch-dev
 
 %changelog
-* Sat Mar 25 2013 Mank <Mank1@seznam.cz> 1git14072013-1
+* Sat Mar 25 2013 Mank <mank@pclinuxos.cz> 1git14072013-1
 - Init Spec

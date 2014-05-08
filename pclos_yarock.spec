@@ -17,7 +17,6 @@ http://qt-apps.org/content/show.php/YaRock?content=129372
 %setup -c Yarock_0.0.58_source
 
 %build
-[ "$RPM_BUILD_ROOT" != "/" ] && rm -rf $RPM_BUILD_ROOT
 cd Yarock_0.0.58_source/
 %qmake_qt4 PREFIX="/usr/"
 #make 
@@ -37,7 +36,7 @@ make INSTALL_ROOT=$RPM_BUILD_ROOT install
 %{_datadir}/*
 
 %changelog
-* Sat Mar 25 2012 Mank <Mank1@seznam.cz> 0.0.58-1
+* Sat Mar 25 2012 Mank <mank@pclinuxos.cz> 0.0.58-1
 - YaRock: Version : 0.0.58
-* Sat Mar 25 2011 Mank <Mank1@seznam.cz> 0.0.56-1
+* Sat Mar 25 2011 Mank <mank@pclinuxos.cz> 0.0.56-1
 - YaRock: Version : 0.0.56

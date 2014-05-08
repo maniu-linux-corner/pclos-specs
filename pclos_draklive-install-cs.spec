@@ -15,13 +15,9 @@ Upravený instalátor systému pro CZ/SK LiveCD s prostředím KDE
 %setup -c draklive-install-cs
 
 %build
-[ "$RPM_BUILD_ROOT" != "/" ] && rm -rf $RPM_BUILD_ROOT
-
 cp -r * $RPM_BUILD_ROOT
 
-
 %clean
-[ "$RPM_BUILD_ROOT" != "/" ] && rm -rf $RPM_BUILD_ROOT
 
 %post
 
@@ -45,9 +41,6 @@ cp -r * $RPM_BUILD_ROOT
 %{_datadir}/libDrakX/pixmaps/pclinuxos-install-cs.png
 %{_datadir}/libDrakX/pixmaps/pclinuxos-wizard-cs.png
 %{_datadir}/mylivecd/halt.local
-#%{_datadir}/pclinuxos/pics/cz.png
-#%{_datadir}/pclinuxos/pics/exit.png
-#%{_datadir}/pclinuxos/pics/sk.png
 %{_datadir}/applications/draklive-install-cs-sk.desktop
 /etc/pam.d/draklive-install-lock-storage-cs
 /etc/pam.d/draklive-install-lock-storage-sk
@@ -61,5 +54,5 @@ cp -r * $RPM_BUILD_ROOT
 
 
 %changelog
-* Sat Aug 11 2012 Mank <Mank1@seznam.cz> 1.0.1-2
+* Sat Aug 11 2012 Mank <mank@pclinuxos.cz> 1.0.1-2
 -

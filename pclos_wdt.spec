@@ -25,7 +25,6 @@ A Web Develops Tools
 %setup -n WDT
 
 %build
-[ "$RPM_BUILD_ROOT" != "/" ] && rm -rf $RPM_BUILD_ROOT
 mkdir -p $RPM_BUILD_ROOT/usr/
 mkdir -p $RPM_BUILD_ROOT/usr/bin
 mkdir -p $RPM_BUILD_ROOT/usr/share/
@@ -34,7 +33,6 @@ cp start/wdt $RPM_BUILD_ROOT/usr/bin/wdt
 install -D -m644 "%{SOURCE1}" "$RPM_BUILD_ROOT/usr/share/applications/wdt.desktop"
 
 %clean
-[ "$RPM_BUILD_ROOT" != "/" ] && rm -rf $RPM_BUILD_ROOT
 
 %post
 
@@ -44,5 +42,5 @@ install -D -m644 "%{SOURCE1}" "$RPM_BUILD_ROOT/usr/share/applications/wdt.deskto
 %{_datadir}/*
 
 %changelog
-* Sat Mar 25 2012 Mank <Mank1@seznam.cz> 2.6.6-1
+* Sat Mar 25 2012 Mank <mank@pclinuxos.cz> 2.6.6-1
 - WDT

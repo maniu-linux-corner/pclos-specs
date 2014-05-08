@@ -43,6 +43,6 @@ rm -rf %{buildroot}
 %{_datadir}/doc/xfce-theme-manager/*
 
 %changelog
-* Wed Sep 27 2012 Mank <mank1@seznam.cz> %{version}-%{release}
+* Wed Sep 27 2012 Mank <mank@pclinuxos.cz> %{version}-%{release}
 -	Build for PCLinuxOS
 

@@ -33,5 +33,5 @@ cp -r * $RPM_BUILD_ROOT
 #%{_docdir}/*
 
 %changelog
-* Sat Aug 11 2012 Mank <Mank1@seznam.cz> 1.0.4-1
+* Sat Aug 11 2012 Mank <mank@pclinuxos.cz> 1.0.4-1
 - Installer (Gnome)

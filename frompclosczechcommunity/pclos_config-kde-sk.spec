@@ -248,5 +248,5 @@ rm /tmp/en-na-sk-kde.sh
    /etc/skel/Plocha/trash.desktop
 
 %changelog
-* Sat Aug 11 2012 Mank <Mank1@seznam.cz> 1.0.0-2
+* Sat Aug 11 2012 Mank <mank@pclinuxos.cz> 1.0.0-2
 -

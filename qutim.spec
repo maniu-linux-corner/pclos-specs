@@ -2,30 +2,17 @@
 # spec file for package qutim
 #
 # Copyright (c) 2012 Sergei Lopatin <magist3r@gmail.com>
-#
-# All modifications and additions to the file contributed by third parties
-# remain the property of their copyright owners, unless otherwise agreed
-# upon. The license for this file, and modifications and additions to the
-# file, is the same license as for the pristine package itself (unless the
-# license for the pristine package is not an Open Source License, in which
-# case the license is the MIT License). An "Open Source License" is a
-# license that conforms to the Open Source Definition (Version 1.9)
-# published by the Open Source Initiative.
-
-# Please submit bugfixes or comments via http://bugs.opensuse.org/
-#
 %define         _sharedir share/apps/qutim
-
 Name:           qutim
 Version:        0.3.1+git.1357659068
 Release:        117.1
-License:        GPL-3.0+
+License:        GPLv3
 Summary:        QutIM instant messenger
 Url:            http://qutim.org/
 Group:          Productivity/Networking/Instant Messenger
 Source0:        %{name}-%{version}.tar
-#Patch0:         150.patch
-#Patch1:         6.patch
+#Patch0:        150.patch
+#Patch1:        6.patch
 Requires:       libjreen1 >= 1.1.0
 Requires:       libvreen0 >= 0.9.1
 Requires:       libqtdocktile1 >= 1.0.0

@@ -225,7 +225,7 @@ export STRIP=/bin/true
 %{_mandir}/man6/*.6*
 
 %changelog
-* Fri Jan 4  2013 Mank <Mank1@seznam.cz> - 0.0.12-2
+* Fri Jan 4  2013 Mank <mank@pclinuxos.cz> - 0.0.12-2
    Some mirror changes for PCLOS .
 * Wed Dec 19 2012 pcpa <paulo.cesar.pereira.de.andrade@gmail.com> - 0.0.11-2
 - Enable build with system nvtt as it is now approved in Fedora (#823096)

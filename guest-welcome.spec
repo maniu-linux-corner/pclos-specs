@@ -32,5 +32,5 @@ cp -r ./ $RPM_BUILD_ROOT/
 /usr/share/pclinuxos/pics/*
 /home/guest/.kde4/*
 %changelog
-* Sat Mar 25 2011 Mank <Mank1@seznam.cz> 0.0.1-1
+* Sat Mar 25 2011 Mank <mank@pclinuxos.cz> 0.0.1-1
 - guest-welccome: Version pre: 0.0.1

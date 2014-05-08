@@ -23,7 +23,7 @@ A ScreenSaver with Analog Clock
 rm $RPM_BUILD_ROOT/%{_datadir}/applications/screensavers/anclock.desktop
 cp -f %{SOURCE5} $RPM_BUILD_ROOT/%{_datadir}/applications/screensavers/anclock.desktop
 %clean
-[ "$RPM_BUILD_ROOT" != "/" ] && rm -rf $RPM_BUILD_ROOT
+
 make clean
 
 %files
@@ -33,5 +33,5 @@ make clean
 %{_datadir}/applications/screensavers/anclock.desktop
 
 %changelog
-* Sat Dec 12 2013 Mank <Mank1@seznam.cz> 1.0.1-2
+* Sat Dec 12 2013 Mank <mank@pclinuxos.cz> 1.0.1-2
 - anclock: Version 1.0.1

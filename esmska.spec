@@ -58,7 +58,7 @@ A program to send sms via Gateways
 %{_datadir}/pixmaps/esmska.png
 
 %changelog
-* Sat Jul 29 2013 Mank <Mank1@seznam.cz> 1.6-1
+* Sat Jul 29 2013 Mank <mank@pclinuxos.cz> 1.6-1
 - esmska: Version: 1.6
-* Sat Mar 25 2011 Mank <Mank1@seznam.cz> 1.3-1
+* Sat Mar 25 2011 Mank <mank@pclinuxos.cz> 1.3-1
 - esmska: Version: 1.3

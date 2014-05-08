@@ -22,7 +22,6 @@ Přeložil: Herní Hosting, s.r.o. - http://www.hernihosting.cz
 %setup -c teamspeak3
 
 %build
-[ "$RPM_BUILD_ROOT" != "/" ] && rm -rf $RPM_BUILD_ROOT
 
 %install
 
@@ -69,6 +68,6 @@ Přeložil: Herní Hosting, s.r.o. - http://www.hernihosting.cz
 
 
 %changelog
-* Sat Mar 25 2011 Mank <Mank1@seznam.cz> 3.0.9.2-1
+* Sat Mar 25 2011 Mank <mank@pclinuxos.cz> 3.0.9.2-1
 ---
 
