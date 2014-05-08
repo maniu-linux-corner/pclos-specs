@@ -2,7 +2,7 @@ Name: draklive-install-kde-cs
 Summary: Upravený instalátor systému pro CZ/SK LiveCD s prostředím KDE
 Version: 1.0.0
 Release: 3
-License: GPL v2
+License: GPLv2
 URL: https://pclinuxos.cz
 BuildArch: noarch
 Group: Applications

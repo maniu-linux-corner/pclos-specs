@@ -2,7 +2,7 @@ Name: config-cs-sk
 Summary: A Sources List for PCLOS (cs&sk)
 Version: 0.0.1
 Release: 1
-License: GPL v2
+License: GPLv2
 BuildArch: noarch
 URL: http://www.pclinuxos.cz
 Group: Applications/System

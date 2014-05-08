@@ -2,7 +2,7 @@ Name: screenfetch
 Summary: A Screenshots Info Utility
 Version: 1git30032014
 Release: 1
-License: GPL
+License: GPLv2
 URL: http://git.silverirc.com/cgit.cgi/screenfetch-dev.git/plain/screenfetch-dev
 Group: Applications
 Source0: screenFetch.tar.xz

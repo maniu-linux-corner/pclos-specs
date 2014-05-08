@@ -2,7 +2,7 @@ Name: xfce-composite-editor
 Summary: A Web Develops Tools
 Version: 2.6.6
 Release: 3
-License: GPL v2
+License: GPLv2
 URL: http://keithhedger.hostingsiteforfree.com/pages/apps.html
 BuildArch: noarch
 Group: Applications/Xfce

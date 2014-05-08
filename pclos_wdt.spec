@@ -2,7 +2,7 @@ Name: wdt
 Summary: A Web Develops Tools
 Version: 2.6.6
 Release: 2
-License: GPL v2
+License: GPLv2
 URL: https://launchpad.net/~petrakis/+archive/wdt-main
 BuildArch: noarch
 Group: Applications

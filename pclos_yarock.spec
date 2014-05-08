@@ -2,7 +2,7 @@ Name: yarock
 Summary: YaRock - A QT Music Player
 Version: 0.0.58
 Release: 1
-License: GPL
+License: GPLv2
 URL: http://qt-apps.org/content/show.php/YaRock?content=129372
 Group: Applications/Sound
 Source0: Yarock_0.0.58_source.tar.xz

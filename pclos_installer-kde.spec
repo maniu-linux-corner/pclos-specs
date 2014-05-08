@@ -2,7 +2,7 @@ Name: installer-kde
 Summary: Rychlá instalace progamů
 Version: 1.0.8
 Release: 1
-License: GPL v2
+License: GPLv2
 URL: https://pclinuxos.cz
 BuildArch: noarch
 Group: Applications

@@ -9,7 +9,7 @@ Version:	%{version}
 Release:	%{release}
 URL:		http://keithhedger.hostingsiteforfree.com/pages/apps.html#themeed
 Source0:	xfce-theme-manager-0.1.18.tar.gz
-License:	GPL
+License:	GPLv2
 Group:		Desktop Enviroment/Xfce
 BuildRequires:	glib2-devel >= 2.4
 BuildRequires:	gtk+2-devel >= 2.6

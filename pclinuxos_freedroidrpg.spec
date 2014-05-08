@@ -15,7 +15,7 @@ Source11:	%{name}-16x16.png
 Source12:	%{name}-32x32.png
 Source13:	%{name}-48x48.png
 Patch0:		freedroidrpg-0.13-string-format.patch
-License:	GPL
+License:	GPLv2
 Group:		Games/Adventure
 BuildRequires:	libSDL_image-devel libSDL_net-devel libSDL_mixer1.2-devel
 BuildRequires:	libgtk+2.0_0-devel mesa-common-devel

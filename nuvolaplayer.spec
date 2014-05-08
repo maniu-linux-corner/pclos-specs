@@ -1,10 +1,10 @@
 Name: nuvolaplayer
 Summary: Nuvola Player runs a web interface of cloud music services in its own window and provides integration with a Linux desktop .
 Version: 2.3.1
-Release: 2
+Release: 3
 License: 2 Cause BSD Licence/Mixed with Adobe's flash Licence
 URL: http://nuvolaplayer.fenryxo.cz/home.html
-Group: Applications/Sound
+Group: Sound/Players
 Source0: nuvolaplayer-%{version}.tar.gz
 Source100: http://archive.canonical.com/pool/partner/a/adobe-flashplugin/adobe-flashplugin_11.2.202.346.orig.tar.gz
 BuildRequires: vala
@@ -19,21 +19,20 @@ Nuvola Player runs a web interface of cloud music services in its own window and
 Nuvola Player is an open-source project licensed under 2-Clause BSD license and written in Vala (the core) and JavaScript (service integrations). Learn more about how to contribute to the project.
 
 %prep
-%setup
+%setup -q
 
 %build
-[ "$RPM_BUILD_ROOT" != "/" ] && rm -rf $RPM_BUILD_ROOT
-./waf configure --prefix=$RPM_BUILD_ROOT/usr/ --no-unity-quick-list --skip-tests --experimental
+./waf configure --prefix=%{_prefix}/usr --no-unity-quick-list --skip-tests --experimental
 #work around aroudn faulty waf
 xvfb-run -a dbus-launch ./waf build
+%install
 cd ..
-mkdir -p $RPM_BUILD_DIR/opt/nuvolaplayer/flash/
+mkdir -p %{_prefix}/opt/nuvolaplayer/flash/
 tar -xvzf %{SOURCE100}
 cd adobe-flashplugin-11.2.202.346/i386
 %__install -d %{buildroot}/opt/nuvolaplayer/flash/
 %__cp libflashplayer.so %{buildroot}/opt/nuvolaplayer/flash/
 
-%install
 ./waf install
 
 %clean

@@ -2,7 +2,7 @@ Name: pidgin-webkit
 Summary: A Webkit Plugin for pidgin
 Version: 69
 Release: 1
-License: GPL v2
+License: GPLv2
 URL: https://code.launchpad.net/pidgin-webkit
 Group: Applications/IM
 Source0: pidgin-webkit.tar.xz

@@ -2,7 +2,7 @@ Name: mate-clock-screensaver
 Summary: A Screensaver with Analog clock
 Version: 1.0.1
 Release: 3
-License: GPL v3
+License: GPLv3
 Group: Applications/Mate
 Source0: gnome-clock-screensaver-1.0.1.tar.gz
 Source5: anclock.desktop
