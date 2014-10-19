@@ -1,0 +1,10 @@
+[Desktop Entry]
+Categories=Development;WebDevelopment;
+Exec=wdt
+Icon=wdt
+Terminal=false
+Type=Application
+Version=1.0
+Encoding=UTF-8
+Name=Web Developer Tools
+GenericName=WEB Developer Tools
