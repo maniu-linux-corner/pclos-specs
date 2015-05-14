@@ -10,13 +10,13 @@
 %define	with_gtk	1
 
 Name:		eiskaltdcpp
-Version:	2.2.8
+Version:	2.2.10
 Release:    1
 License:	GPLv3+
 Summary:	Cross-platform program that uses the Direct Connect and ADC protocol
 Url:		http://code.google.com/p/eiskaltdc
 Group:		Networking/File transfer
-Source0:	%{name}-%{version}.tar.xz
+Source0:	%{name}-%{version}.tar.gz
 
 # Core requirements
 BuildRequires:	boost-devel
@@ -27,15 +27,15 @@ BuildRequires:	zlib-devel
 BuildRequires:	gettext
 BuildRequires:	libidn-devel
 # Build broken with this
-BuildRequires:	liblua5.1-devel
+BuildRequires:	%{_lib}lua5.1-devel
 # When enabling miniupnpc in the cmake command line this is needed
-#BuildRequires:	miniupnpc-devel
+BuildRequires:	miniupnpc-devel
 
 # Qt requirements
 %if %{with_qt}
 BuildRequires:	aspell-devel
 # For QT_QML qt4 >= 4.7.0 is needed
-BuildRequires:	qt4-devel >= 4.7.0
+BuildRequires:	qt4-devel >= 4.7.0 libqt5widgets-devel
 %endif
 # Gtk requirements
 %if %{with_gtk}
@@ -44,6 +44,7 @@ BuildRequires:	glib2-devel
 BuildRequires:	%{_lib}gtk+2.0_0-devel
 BuildRequires:	%{_lib}glade2.0_0-devel
 BuildRequires:	%{_lib}notify-devel
+#BuildRequires:	%{_lib}gtk+3.0-devel
 %endif
 BuildRoot:	%{_tmppath}/%{name}-%{version}
 
@@ -91,17 +92,18 @@ compatibility with other clients. This is the GTK front end.
 %setup -q
 #patch0 -p0 -b .cmake_unset
 #patch1 -p0 -b .qt44
-
+#qtling == qthelp at pclinuxos
 #LOCAL = ON
 %build
 %cmake	.. -DCMAKE_BUILD_TYPE=Release \
 	-DCMAKE_INSTALL_PREFIX=%{_prefix} \
 	-DLIB_INSTALL_DIR=%{_libdir} \
-	-DLOCAL_BOOST=ON \
+	-DLOCAL_BOOST=OFF \
 	-DLUA_SCRIPT=ON \
 	-DPERL_REGEX=ON \
 %if %{with_qt}
-	-DUSE_QT=ON \
+	-DUSE_QT=OFF \
+	-DUSE_QT5=ON \
 	-DUSE_QT_SQLITE=ON \
 	-DUSE_JS=ON \
 	-DUSE_ASPELL=ON \
@@ -109,7 +111,7 @@ compatibility with other clients. This is the GTK front end.
 	-DDBUS_NOTIFY=ON \
 	-DUSE_QT_QML=OFF \
 %else
-	-DUSE_QT=OFF \
+	-DUSE_QT5=OFF \
 %endif
 %if %{with_gtk}
 	-DUSE_GTK=ON \
@@ -120,12 +122,11 @@ compatibility with other clients. This is the GTK front end.
 	-DWITH_SOUNDS=ON \
 	-DWITH_EXAMPLES=ON \
 	-DWITH_LUASCRIPTS=ON \
-	-DUSE_MINIUPNP=OFF \
+	-DUSE_MINIUPNP=ON \
 	-DLOCAL_MINIUPNP=OFF \
 	-DCREATE_MO=ON \
 	-DLINGUAS="*"
 # TODO: When enabling some of the below, adjust the BReqs accordingly
-#-DLUA_SCRIPT: build still broken in 2.2.1; to enable it: ON to both LUA_SCRIPT and WITH_LUASCRIPTS
 #-DUSE_MINIUPNP: library not available in Mandriva yet; to enable it: ON to USE_MINIUPNP, OFF to LOCAL_MINIUPNP
 
 %make
