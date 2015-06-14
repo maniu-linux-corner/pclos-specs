@@ -90,10 +90,7 @@ compatibility with other clients. This is the GTK front end.
 
 %prep
 %setup -q
-#patch0 -p0 -b .cmake_unset
-#patch1 -p0 -b .qt44
-#qtling == qthelp at pclinuxos
-#LOCAL = ON
+#qtling == qthelp at the pclinuxos
 %build
 %cmake	.. -DCMAKE_BUILD_TYPE=Release \
 	-DCMAKE_INSTALL_PREFIX=%{_prefix} \
@@ -134,9 +131,8 @@ compatibility with other clients. This is the GTK front end.
 
 %install
 rm -rf %{buildroot}
-#pushd build
+
 %makeinstall_std -C build
-#popd
 
 # We don't want install php only for 3 example scripts (in russian moreover),
 # nor we want remove all the example scripts,
@@ -204,6 +200,8 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Sat Jun 13 2015 Mank <mank@pclinuxos.cz> 2.2.10-1pclinux2015
+- Build for PCLinuxOS updated to 2.2.10
 * Sat Apr 10 2011 Mank <mank@pclinuxos.cz> 2.2.4-1pclinux2011
 - Build for PCLinuxOS updated to 2.2.4
 * Sat Apr 10 2011 Mank <mank@pclinuxos.cz> 2.2.1-1pclinux2010

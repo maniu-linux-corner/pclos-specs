@@ -6,8 +6,8 @@ Summary:        A glib library for controlling any mpris2 compatible player.
 License:        GPLv2
 URL:            https://github.com/matiasdelellis/libmpris2client
 Source0:        libmpris2client-%{version}.tar.bz2
-BuildRequires: libglib2.0-devel
-Requires: libglib2.0_0
+BuildRequires: %{_lib}glib2.0-devel
+Requires: %{_lib}glib2.0_0
 
 %description
 A glib library for controlling any mpris2 compatible player.
@@ -55,3 +55,5 @@ find $RPM_BUILD_ROOT -name '*.la' -exec rm -f {} ';'
 
 
 %changelog
+* Sat Jun 13 2015 Mank <mank@pclinuxos.cz> 0.1.0
+- Init spec file

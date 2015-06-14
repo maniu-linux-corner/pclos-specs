@@ -7,7 +7,7 @@ License:        GPLv2
 URL:            https://github.com/matiasdelellis/xfce4-soundmenu-plugin
 Source0:        xfce4-soundmenu-plugin-%{version}.tar.bz2
 
-BuildRequires: xfce4-panel-devel libxfce4util-devel libxfce4ui-devel libnotify-devel libmpris2client-devel
+BuildRequires: xfce4-panel-devel %{_lib}xfce4util-devel %{_lib}xfce4ui-devel %{_lib}notify-devel libmpris2client-devel
 Requires: xfce4-panel
 
 %description
@@ -37,3 +37,5 @@ find $RPM_BUILD_ROOT -name '*.la' -exec rm -f {} ';'
 
 
 %changelog
+* Sat Jun 13 2015 Mank <mank@pclinuxos.cz> 0.7.0-2
+- Init Spec

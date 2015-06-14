@@ -1,23 +1,24 @@
 Name: xfce-composite-editor
-Summary: A Web Develops Tools
+Summary: A Composite editor for The Xfce 4
 Version: 2.6.6
-Release: 3
+Release: 4
 License: GPLv2
 URL: http://keithhedger.hostingsiteforfree.com/pages/apps.html
 BuildArch: noarch
-Group: Applications/Xfce
+Group: Graphical desktop/Xfce
 Source0: Xfce4-Composite-Editor.tar.gz
 Requires: gtkdialog
 
 Buildroot: %{_tmppath}/%{name}-%{version}-buildroot
 %description
-A Compose Editor
+A Composite editor for The Xfce 4
 
 %prep
-%setup -c Xfce4-Composite-Editor
+%setup -q -c Xfce4-Composite-Editor
 
 %build
-[ "$RPM_BUILD_ROOT" != "/" ] && rm -rf $RPM_BUILD_ROOT
+
+%install
 mkdir -p $RPM_BUILD_ROOT/usr/
 mkdir -p $RPM_BUILD_ROOT/usr/bin
 mkdir -p $RPM_BUILD_ROOT/usr/share/applications
@@ -35,5 +36,7 @@ install -m 744 xfcecomped.desktop $RPM_BUILD_ROOT/usr/share/applications/xfcecom
 %{_datadir}/applications/xfcecomped.desktop
 
 %changelog
+* Sat Jun 13 2015 Mank <mank@pclinuxos.cz> 2.6.6-4
+-  update spec
 * Sat Mar 25 2013 Mank <mank@pclinuxos.cz> 2.6.6-3
 -  init spec
