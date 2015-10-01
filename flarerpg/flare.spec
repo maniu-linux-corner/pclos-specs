@@ -1,5 +1,5 @@
 %define name	flare
-%define version	0.19git20140509
+%define version	0.19git20150928
 %define release	%mkrel 1
 %define	Summary	A RPG clone with Smal code base
 
@@ -12,7 +12,9 @@ Name:		%{name}
 Version:	%{version}
 Release:	%{release}
 URL:		http://flarerpg.org
-License:	GPL
+License:	GPLv3
+Requires:	%{name}-data
+
 %description
 A RPG clone with Smal code base
 
@@ -21,12 +23,14 @@ Summary:	%{Summary} Data Files
 Version:	%{version}
 Release:	%{release}
 URL:		http://flarerpg.org
-License:	GPL
+License:	GPLv3
+Requires:	%{name}
+
 %description data
 Data Files for Flare Game
 
 Group:		Games/RPG
-BuildRequires:	%{_lib}SDL_image-devel %{_lib}SDL_net-devel %{_lib}SDL_mixer1.2-devel %{_lib}SDL-devel %{_lib}SDL_ttf-devel cmake
+BuildRequires:	%{_lib}sdl2_image-devel %{_lib}sdl2_net-devel %{_lib}sdl2_mixer-devel %{_lib}sdl2-devel cmake %{_lib}sdl2_ttf-devel %{_lib}sdl2_ttf-devel
 Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %prep
@@ -35,13 +39,16 @@ unzip "%{SOURCE1}" -d "flare-engine-master"
 
 %build
 cd flare-engine-master/flare-engine-master/
-cmake .
+cmake -DCMAKE_INSTALL_PREFIX=/usr -DBINDIR=/usr/bin -DDATADIR=/usr/share/flare .
 %make
 cd ../../
 cmake -DCMAKE_INSTALL_PREFIX=/usr -DBINDIR=/usr/bin -DDATADIR=/usr/share/flare .
 %make
 
 %install
+cd flare-engine-master/flare-engine-master/
+make install DESTDIR=$RPM_BUILD_ROOT
+cd ../../
 make install DESTDIR=$RPM_BUILD_ROOT
 
 #fix the desktop file
@@ -63,6 +70,7 @@ rm -rf %{buildroot}
 %{_datadir}/flare/*
 
 %changelog
+* Wed Jun 15 2015 Mank <mank@pclinuxos.cz> 0.19-1
+-	Build for PCLinuxOS (updated)
 * Wed Jun 15 2013 Mank <mank@pclinuxos.cz> 0.19-1
 -	Build for PCLinuxOS
-
