@@ -4,19 +4,17 @@
 # Copyright (c) 2012 Sergei Lopatin <magist3r@gmail.com>
 %define         _sharedir share/apps/qutim
 Name:           qutim
-Version:        0.3.1+git.1357659068
+Version:        0.3.3
 Release:        117.1
 License:        GPLv3
 Summary:        QutIM instant messenger
 Url:            http://qutim.org/
 Group:          Productivity/Networking/Instant Messenger
-Source0:        %{name}-%{version}.tar
-#Patch0:        150.patch
-#Patch1:        6.patch
-Requires:       libjreen1 >= 1.1.0
-Requires:       libvreen0 >= 0.9.1
-Requires:       libqtdocktile1 >= 1.0.0
-Requires:       libqca1-sasl
+Source0:        %{name}-%{version}.tar.xz
+#Requires:       libjreen1 >= 1.1.0
+#Requires:       libvreen0 >= 0.9.1
+#Requires:       libqtdocktile1 >= 1.0.0
+Requires:       %{_lib}qca2
 Requires:       %{name}-icons
 Obsoletes:      qutim-plugins qutim-plugins-debuginfo qutim-plugin-phononsound
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
@@ -28,14 +26,14 @@ BuildRequires:  fdupes
 %endif
 
 BuildRequires:  cmake >= 2.8
-BuildRequires:  libqca2-devel
+BuildRequires:  %{_lib}qca2-devel
 #BuildRequires:  qt-webkit-devel
-BuildRequires:  libjreen-devel >= 1.1.0
-BuildRequires:  libvreen-devel >= 0.9.1
-BuildRequires:  libqtdocktile-devel >= 1.0.0
-BuildRequires:  libqt4-devel
+#BuildRequires:  libjreen-devel >= 1.1.0
+#BuildRequires:  libvreen-devel >= 0.9.1
+#BuildRequires:  libqtdocktile-devel >= 1.0.0
+BuildRequires:  %{_lib}qt4-devel
 BuildRequires:  phonon-devel
-BuildRequires:  libotr2-devel >= 3.2.0
+BuildRequires:  %{_lib}otr-devel >= 3.2.0
 
 %description
 Multiprotocol instant messenger.
@@ -44,11 +42,11 @@ Multiprotocol instant messenger.
 Summary:        Development files for QutIM
 Group:          Development/Libraries/C and C++
 Requires:       %{name} = %{version}
-Requires:       libjreen-devel >= 1.1.0
-Requires:       libvreen-devel >= 0.9.1
-Requires:       libdocktile-devel >= 1.0.0
-Requires:       qca2-devel
-Requires:       libqt4-devel
+#Requires:       libjreen-devel >= 1.1.0
+#Requires:       libvreen-devel >= 0.9.1
+#Requires:       libdocktile-devel >= 1.0.0
+Requires:       %{_lib}qca2-devel
+Requires:       %{_lib}qt4-devel
 
 %description devel
 Development files for QutIM
@@ -78,7 +76,7 @@ Summary:        Hunspeller plugin for QutIM
 Requires:       %{name} = %{version}
 
 BuildRequires:  hunspell
-BuildRequires:  libhunspell-devel
+BuildRequires:  %{_lib}hunspell-devel
 %if 0%{?suse_version}
 Supplements:  packageand(qutim:hunspell)
 %endif
@@ -110,7 +108,7 @@ Plugin that provides integration with KDE
 Summary:        SDL sound plugin for QutIM
 Requires:       %{name} = %{version}
 %if 0%{?suse_version}
-BuildRequires:  libSDL_mixer-devel
+BuildRequires:  %{_lib}SDL_mixer-devel
 Supplements:    packageand(qutim:libSDL_mixer-1_2-0)
 %endif
 
@@ -134,9 +132,6 @@ Plugin for downloadong additional plugins and artwork.
 
 %setup -q -n %{name}-%{version}
 
-#patch0
-#patch1
-
 %build
 mkdir build
 pushd build
@@ -144,9 +139,9 @@ export CXXFLAGS="-O0"
 export QMAKE_CXXFLAGS="-O0"
 cmake \
     -DCMAKE_INSTALL_PREFIX=%{_prefix} \
-    -DSYSTEM_JREEN=1 \
-    -DSYSTEM_VREEN=1 \
-    -DLIB_SUFFIX="$LIBSUFFIX" \
+    -DSYSTEM_JREEN=0 \
+    -DSYSTEM_VREEN=0 \
+    -DLIB_SUFFIX="`getconf LONG_BIT`" \
     -DBEARERMANAGER=1 \
     -DMULTIMEDIABACKEND=0 \
     -DANTIBOSS=0 \
@@ -157,11 +152,11 @@ cmake \
     -DMOBILEABOUT=0 \
     -DMOBILECONTACTINFO=0 \
     -DMOBILENOTIFICATIONSSETTINGS=1 \
-    -DNOTIFICATIONSSETTINGS=0 \
+    -DNOTIFICATIONSSETTINGS=1 \
     -DMOBILESETTINGSDIALOG=0 \
     -DQRCICONS=0 \
     -DQUTIM_SHARE_DIR=%{_sharedir} \
-    -DSYSTEM_QTDOCKTILE=1 \
+    -DSYSTEM_QTDOCKTILE=0 \
     -DQUTIM_GENERATE_DOCS=0 \
     ..
 make
@@ -202,10 +197,26 @@ rm -rf %{buildroot}
 
 #lib
 %{_libdir}/libqutim.so.*
-#{_libdir}/libqtdocktile.so.*
+%{_libdir}/libqtdocktile.so.*
 %{_libdir}/libqutim-adiumchat.so.*
 %{_libdir}/libqutim-adiumwebview.so.*
 %{_libdir}/libqutim-simplecontactlist.so.*
+%{_libdir}/libjreen.so
+   %{_libdir}/libjreen.so.1
+   %{_libdir}/libjreen.so.1.1.1
+   %{_libdir}/libqtdocktile.so
+   %{_libdir}/libvreen.so
+   %{_libdir}/libvreen.so.0
+   %{_libdir}/libvreen.so.0.9.5
+   %{_libdir}/qt4/imports/org/docktile/libqmldocktileplugin.so
+   %{_libdir}/qt4/imports/org/docktile/qmldir
+   %{_libdir}/qutim/plugins/libautopaster.so
+   %{_libdir}/qutim/plugins/libquetzal.so
+   %{_libdir}/qutim/plugins/libscreenshoter.so
+   %{_libdir}/qt4/plugins/docktile/libunityplugin.so
+   %{_libdir}/qutim/plugins/libnotificationssettings.so
+   %{_libdir}/qutim/plugins/libsdlsound.so
+
 
 #app icons
 %{_datadir}/pixmaps/qutim.xpm
@@ -274,7 +285,7 @@ rm -rf %{buildroot}
 %{_libdir}/qutim/plugins/libtrayicon.so
 %{_libdir}/qutim/plugins/libxsettingsdialog.so
 %{_libdir}/qutim/plugins/liblinuxintegration.so
-%{_libdir}/qutim/plugins/libphononsound.so
+#%{_libdir}/qutim/plugins/libphononsound.so
 %{_libdir}/qutim/plugins/libcomparators.so
 
 %{_libdir}/qutim/plugins/libaescrypto.so
@@ -306,11 +317,13 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %{_includedir}/*
 %{_libdir}/libqutim.so
-#{_libdir}/libqtdocktile.so
 %{_libdir}/libqutim-adiumchat.so
 %{_libdir}/libqutim-adiumwebview.so
 %{_libdir}/libqutim-simplecontactlist.so
 %{_datadir}/cmake/Modules
+   %{_libdir}/pkgconfig/libjreen.pc
+   %{_libdir}/pkgconfig/qtdocktile.pc
+
 
 %files icons
 %defattr(-,root,root)
@@ -320,7 +333,6 @@ rm -rf %{buildroot}
    %{_datadir}/apps/qutim
 %endif
 %{_datadir}/icons/*
-#%%{_datadir}/apps/*
 
 %files plugin-aspeller
 %defattr(-,root,root)
@@ -338,12 +350,12 @@ rm -rf %{buildroot}
 %dir %{_datadir}/apps/desktoptheme/default/icons
 %{_datadir}/apps/desktoptheme/default/icons/qutim.svg
 
-%files plugin-sdlsound
-%defattr(-,root,root)
-%{_libdir}/qutim/plugins/libsdlsound.so
+#%files plugin-sdlsound
+#%defattr(-,root,root)
+#%{_libdir}/qutim/plugins/libsdlsound.so
 
-%files plugin-plugman
-%defattr(-,root,root)
-%{_libdir}/qutim/plugins/libplugman.so
+#%files plugin-plugman
+#%defattr(-,root,root)
+#%{_libdir}/qutim/plugins/libplugman.so
 
 %changelog
