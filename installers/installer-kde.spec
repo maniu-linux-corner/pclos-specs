@@ -1,5 +1,5 @@
 Name: installer-kde
-Summary: Rychlá instalace progamů
+Summary: Rychlá instalace programů
 Version: 1.0.12
 Release: 1
 License: GPL v2

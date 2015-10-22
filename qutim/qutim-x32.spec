@@ -133,7 +133,11 @@ cmake \
     -DCMAKE_INSTALL_PREFIX=%{_prefix} \
     -DSYSTEM_JREEN=0 \
     -DSYSTEM_VREEN=0 \
-    -DLIB_SUFFIX="`getconf LONG_BIT`" \
+%ifarch i386 i486 i586 i686 athlon
+    -DLIB_SUFFIX="" \
+%else
+	-DLIB_SUFFIX="'getconf LONG_BIT'" \
+%endif    
     -DBEARERMANAGER=1 \
     -DMULTIMEDIABACKEND=0 \
     -DANTIBOSS=0 \
@@ -189,26 +193,37 @@ rm -rf %{buildroot}
 
 #lib
 %{_libdir}/libqutim.so.*
+%ifarch i386 i486 i586 i686 athlon
+#
+%else
 %{_libdir}/libqtdocktile.so.*
+%{_libdir}/libqtdocktile.so
+%endif
 %{_libdir}/libqutim-adiumchat.so.*
 %{_libdir}/libqutim-adiumwebview.so.*
 %{_libdir}/libqutim-simplecontactlist.so.*
 %{_libdir}/libjreen.so
 %{_libdir}/libjreen.so.1
 %{_libdir}/libjreen.so.1.1.1
-%{_libdir}/libqtdocktile.so
 %{_libdir}/libvreen.so
 %{_libdir}/libvreen.so.0
 %{_libdir}/libvreen.so.0.9.5
+%ifarch i386 i486 i586 i686 athlon
+#
+%else
 %{_libdir}/qt4/imports/org/docktile/libqmldocktileplugin.so
 %{_libdir}/qt4/imports/org/docktile/qmldir
+%endif
 %{_libdir}/qutim/plugins/libautopaster.so
 %{_libdir}/qutim/plugins/libquetzal.so
 %{_libdir}/qutim/plugins/libscreenshoter.so
-%{_libdir}/qt4/plugins/docktile/libunityplugin.so
 %{_libdir}/qutim/plugins/libnotificationssettings.so
+%ifarch i386 i486 i586 i686 athlon
+#
+%else
 %{_libdir}/qutim/plugins/libsdlsound.so
-
+%{_libdir}/qt4/plugins/docktile/libunityplugin.so
+%endif
 
 #app icons
 %{_datadir}/pixmaps/qutim.xpm
@@ -303,7 +318,11 @@ rm -rf %{buildroot}
 %{_libdir}/qutim/plugins/libupdater.so
 %{_libdir}/qutim/plugins/libformula.so
 %{_libdir}/qutim/plugins/libofftherecord.so
+%ifarch i386 i486 i586 i686 athlon
+#
+%else
 %{_libdir}/qutim/plugins/libdocktile.so
+%endif
 
 %files devel
 %defattr(-,root,root)
@@ -314,8 +333,11 @@ rm -rf %{buildroot}
 %{_libdir}/libqutim-simplecontactlist.so
 %{_datadir}/cmake/Modules
    %{_libdir}/pkgconfig/libjreen.pc
+%ifarch i386 i486 i586 i686 athlon
+#
+%else   
    %{_libdir}/pkgconfig/qtdocktile.pc
-
+%endif
 
 %files icons
 %defattr(-,root,root)
@@ -334,20 +356,20 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %{_libdir}/qutim/plugins/libhunspeller.so
 
-%files plugin-kdeintegration
-%defattr(-,root,root)
-%{_libdir}/qutim/plugins/libkdeintegration.so
-%dir %{_datadir}/apps/desktoptheme/
-%dir %{_datadir}/apps/desktoptheme/default
-%dir %{_datadir}/apps/desktoptheme/default/icons
-%{_datadir}/apps/desktoptheme/default/icons/qutim.svg
+#%files plugin-kdeintegration
+#%defattr(-,root,root)
+#%{_libdir}/qutim/plugins/libkdeintegration.so
+#%dir %{_datadir}/apps/desktoptheme/
+#%dir %{_datadir}/apps/desktoptheme/default
+#%dir %{_datadir}/apps/desktoptheme/default/icons
+#%{_datadir}/apps/desktoptheme/default/icons/qutim.svg
 
 #%files plugin-sdlsound
 #%defattr(-,root,root)
 #%{_libdir}/qutim/plugins/libsdlsound.so
 
-#%files plugin-plugman
-#%defattr(-,root,root)
-#%{_libdir}/qutim/plugins/libplugman.so
+%files plugin-plugman
+%defattr(-,root,root)
+%{_libdir}/qutim/plugins/libplugman.so
 
 %changelog
