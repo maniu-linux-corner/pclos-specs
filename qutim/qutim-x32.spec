@@ -16,12 +16,6 @@ Requires:       %{name}-icons
 Obsoletes:      qutim-plugins qutim-plugins-debuginfo qutim-plugin-phononsound
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 
-%if 0%{?suse_version}
-BuildRequires:  update-desktop-files
-BuildRequires:  fdupes
-%define         _sharedir share/kde4/apps/qutim
-%endif
-
 BuildRequires:  cmake >= 2.8
 BuildRequires:  %{_lib}qca2-devel
 #BuildRequires:  qt-webkit-devel
@@ -56,9 +50,6 @@ Summary:        Aspeller plugin for QutIM
 BuildRequires:  aspell
 BuildRequires:  libaspell-devel
 Requires:       %{name} = %{version}
-%if 0%{?suse_version}
-Supplements:  packageand(qutim:aspell)
-%endif
 
 %description plugin-aspeller
 Spell checker plugin for QutIM based on aspell
@@ -69,9 +60,6 @@ Requires:       %{name} = %{version}
 
 BuildRequires:  hunspell
 BuildRequires:  %{_lib}hunspell-devel
-%if 0%{?suse_version}
-Supplements:  packageand(qutim:hunspell)
-%endif
 
 %description plugin-hunspeller
 Spell checker plugin for QutIM based on hunspell
@@ -79,19 +67,9 @@ Spell checker plugin for QutIM based on hunspell
 %package plugin-kdeintegration
 Summary:        KDE integration plugin for QutIM
 Requires:       %{name} = %{version}
-%if 0%{?suse_version}
-BuildRequires:  kdelibs-devel
-Supplements:    packageand(qutim:libkde4)
-%kde4_runtime_requires
-%endif
 
-%if 0%{?mandriva_version}
 BuildRequires: kdelibs-devel
-%endif
 
-%if 0%{?fedora_version} || 0%{?rhel_version} || 0%{?centos_version}
-BuildRequires: kdelibs-devel
-%endif
 
 %description plugin-kdeintegration
 Plugin that provides integration with KDE
@@ -99,14 +77,7 @@ Plugin that provides integration with KDE
 %package plugin-sdlsound
 Summary:        SDL sound plugin for QutIM
 Requires:       %{name} = %{version}
-%if 0%{?suse_version}
 BuildRequires:  %{_lib}SDL_mixer-devel
-Supplements:    packageand(qutim:libSDL_mixer-1_2-0)
-%endif
-
-%if 0%{?fedora_version}
-BuildRequires: SDL_mixer-devel
-%endif
 
 %description plugin-sdlsound
 Sound engine plugin based on SDL
@@ -161,15 +132,7 @@ popd #build
 %install
 pushd build
 %make_install
-%if 0%{?suse_version}
-  %suse_update_desktop_file qutim
-%endif
 popd #build
-
-# Link duplicate files
-%if 0%{?suse_version}
-  %fdupes %{buildroot}/%{_datadir}/apps
-%endif
 
 %post
 /sbin/ldconfig
@@ -192,6 +155,10 @@ rm -rf %{buildroot}
 %{_datadir}/applications/%{name}.desktop
 
 #lib
+%{_libdir}/libqutim.so
+%{_libdir}/libqutim-adiumchat.so
+%{_libdir}/libqutim-adiumwebview.so
+%{_libdir}/libqutim-simplecontactlist.so
 %{_libdir}/libqutim.so.*
 %ifarch i386 i486 i586 i686 athlon
 #
@@ -327,10 +294,6 @@ rm -rf %{buildroot}
 %files devel
 %defattr(-,root,root)
 %{_includedir}/*
-%{_libdir}/libqutim.so
-%{_libdir}/libqutim-adiumchat.so
-%{_libdir}/libqutim-adiumwebview.so
-%{_libdir}/libqutim-simplecontactlist.so
 %{_datadir}/cmake/Modules
    %{_libdir}/pkgconfig/libjreen.pc
 %ifarch i386 i486 i586 i686 athlon

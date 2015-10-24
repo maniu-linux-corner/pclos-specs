@@ -4,7 +4,7 @@
 %define         _sharedir share/apps/qutim
 Name:           qutim
 Version:        0.3.3
-Release:        117.1
+Release:        117.2
 License:        GPLv3
 Summary:        QutIM instant messenger
 Url:            http://qutim.org/
@@ -15,19 +15,14 @@ Requires:       %{_lib}qca2
 Requires:       %{name}-icons
 Obsoletes:      qutim-plugins qutim-plugins-debuginfo qutim-plugin-phononsound
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
-
-%if 0%{?suse_version}
-BuildRequires:  update-desktop-files
-BuildRequires:  fdupes
-%define         _sharedir share/kde4/apps/qutim
-%endif
+AutoReq: no
 
 BuildRequires:  cmake >= 2.8
 BuildRequires:  %{_lib}qca2-devel
-#BuildRequires:  qt-webkit-devel
 BuildRequires:  %{_lib}qt4-devel
 BuildRequires:  phonon-devel
 BuildRequires:  %{_lib}otr-devel >= 3.2.0
+Requires:       task-qt4
 
 %description
 Multiprotocol instant messenger.
@@ -35,7 +30,6 @@ Multiprotocol instant messenger.
 %package devel
 Summary:        Development files for QutIM
 Group:          Development/Libraries/C and C++
-
 Requires:       %{name} = %{version}
 Requires:       %{_lib}qca2-devel
 Requires:       %{_lib}qt4-devel
@@ -54,11 +48,8 @@ Icon files for QutIM package.
 %package plugin-aspeller
 Summary:        Aspeller plugin for QutIM
 BuildRequires:  aspell
-BuildRequires:  libaspell-devel
+BuildRequires:  %{_lib}aspell-devel
 Requires:       %{name} = %{version}
-%if 0%{?suse_version}
-Supplements:  packageand(qutim:aspell)
-%endif
 
 %description plugin-aspeller
 Spell checker plugin for QutIM based on aspell
@@ -69,9 +60,6 @@ Requires:       %{name} = %{version}
 
 BuildRequires:  hunspell
 BuildRequires:  %{_lib}hunspell-devel
-%if 0%{?suse_version}
-Supplements:  packageand(qutim:hunspell)
-%endif
 
 %description plugin-hunspeller
 Spell checker plugin for QutIM based on hunspell
@@ -79,19 +67,7 @@ Spell checker plugin for QutIM based on hunspell
 %package plugin-kdeintegration
 Summary:        KDE integration plugin for QutIM
 Requires:       %{name} = %{version}
-%if 0%{?suse_version}
 BuildRequires:  kdelibs-devel
-Supplements:    packageand(qutim:libkde4)
-%kde4_runtime_requires
-%endif
-
-%if 0%{?mandriva_version}
-BuildRequires: kdelibs-devel
-%endif
-
-%if 0%{?fedora_version} || 0%{?rhel_version} || 0%{?centos_version}
-BuildRequires: kdelibs-devel
-%endif
 
 %description plugin-kdeintegration
 Plugin that provides integration with KDE
@@ -99,14 +75,8 @@ Plugin that provides integration with KDE
 %package plugin-sdlsound
 Summary:        SDL sound plugin for QutIM
 Requires:       %{name} = %{version}
-%if 0%{?suse_version}
-BuildRequires:  %{_lib}SDL_mixer-devel
-Supplements:    packageand(qutim:libSDL_mixer-1_2-0)
-%endif
 
-%if 0%{?fedora_version}
-BuildRequires: SDL_mixer-devel
-%endif
+BuildRequires:  %{_lib}SDL_mixer-devel
 
 %description plugin-sdlsound
 Sound engine plugin based on SDL
@@ -157,15 +127,8 @@ popd #build
 %install
 pushd build
 %make_install
-%if 0%{?suse_version}
-  %suse_update_desktop_file qutim
-%endif
-popd #build
 
-# Link duplicate files
-%if 0%{?suse_version}
-  %fdupes %{buildroot}/%{_datadir}/apps
-%endif
+popd #build
 
 %post
 /sbin/ldconfig
@@ -193,13 +156,18 @@ rm -rf %{buildroot}
 %{_libdir}/libqutim-adiumchat.so.*
 %{_libdir}/libqutim-adiumwebview.so.*
 %{_libdir}/libqutim-simplecontactlist.so.*
-%{_libdir}/libjreen.so
+
 %{_libdir}/libjreen.so.1
 %{_libdir}/libjreen.so.1.1.1
 %{_libdir}/libqtdocktile.so
-%{_libdir}/libvreen.so
+#%{_libdir}/libvreen.so
 %{_libdir}/libvreen.so.0
 %{_libdir}/libvreen.so.0.9.5
+%{_libdir}/libqutim.so
+%{_libdir}/libqutim-adiumchat.so
+%{_libdir}/libqutim-adiumwebview.so
+%{_libdir}/libqutim-simplecontactlist.so
+
 %{_libdir}/qt4/imports/org/docktile/libqmldocktileplugin.so
 %{_libdir}/qt4/imports/org/docktile/qmldir
 %{_libdir}/qutim/plugins/libautopaster.so
@@ -308,22 +276,16 @@ rm -rf %{buildroot}
 %files devel
 %defattr(-,root,root)
 %{_includedir}/*
-%{_libdir}/libqutim.so
-%{_libdir}/libqutim-adiumchat.so
-%{_libdir}/libqutim-adiumwebview.so
-%{_libdir}/libqutim-simplecontactlist.so
+%{_libdir}/libjreen.so
+%{_libdir}/libvreen.so
 %{_datadir}/cmake/Modules
-   %{_libdir}/pkgconfig/libjreen.pc
-   %{_libdir}/pkgconfig/qtdocktile.pc
+%{_libdir}/pkgconfig/libjreen.pc
+%{_libdir}/pkgconfig/qtdocktile.pc
 
 
 %files icons
 %defattr(-,root,root)
-%if 0%{?suse_version}
-   %{_datadir}/kde4/apps/qutim
-%else
-   %{_datadir}/apps/qutim
-%endif
+%{_datadir}/apps/qutim
 %{_datadir}/icons/*
 
 %files plugin-aspeller
