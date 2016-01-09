@@ -4,7 +4,7 @@
 %define         _sharedir share/apps/qutim
 Name:           qutim
 Version:        0.3.3
-Release:        117.2
+Release:        117.3
 License:        GPLv3
 Summary:        QutIM instant messenger
 Url:            http://qutim.org/
@@ -22,6 +22,8 @@ BuildRequires:  %{_lib}qca2-devel
 BuildRequires:  %{_lib}qt4-devel
 BuildRequires:  phonon-devel
 BuildRequires:  %{_lib}otr-devel >= 3.2.0
+Obsoletes:		%{_lib}jreen1
+Obsoletes:		%{_lib}vreen0
 Requires:       task-qt4
 
 %description
@@ -95,7 +97,7 @@ Plugin for downloadong additional plugins and artwork.
 %setup -q -n %{name}-%{version}
 
 %build
-mkdir build
+mkdir -p build
 pushd build
 export CXXFLAGS="-O0"
 export QMAKE_CXXFLAGS="-O0"
@@ -120,6 +122,10 @@ cmake \
     -DQUTIM_SHARE_DIR=%{_sharedir} \
     -DSYSTEM_QTDOCKTILE=0 \
     -DQUTIM_GENERATE_DOCS=0 \
+    -DVKONTAKTE=0 \
+    -DPHOTOALBUM=0 \
+    -DVPHOTOALBUM/DEFAULT=0 \
+	-DYANDEXNAROD=0 \
     ..
 make
 popd #build
@@ -161,8 +167,8 @@ rm -rf %{buildroot}
 %{_libdir}/libjreen.so.1.1.1
 %{_libdir}/libqtdocktile.so
 #%{_libdir}/libvreen.so
-%{_libdir}/libvreen.so.0
-%{_libdir}/libvreen.so.0.9.5
+#%{_libdir}/libvreen.so.0
+#%{_libdir}/libvreen.so.0.9.5
 %{_libdir}/libqutim.so
 %{_libdir}/libqutim-adiumchat.so
 %{_libdir}/libqutim-adiumwebview.so
@@ -188,7 +194,7 @@ rm -rf %{buildroot}
 %{_libdir}/qutim/plugins/liboscar.so
 %{_libdir}/qutim/plugins/liboscaridentify.so
 %{_libdir}/qutim/plugins/liboscarxstatus.so
-%{_libdir}/qutim/plugins/libvkontakte.so
+#%{_libdir}/qutim/plugins/libvkontakte.so
 
 #plugins
 %{_libdir}/qutim/plugins/libautoreply.so
@@ -263,7 +269,7 @@ rm -rf %{buildroot}
 %{_libdir}/qutim/plugins/libweather.so
 %{_libdir}/qutim/plugins/liblogger.so
 %{_libdir}/qutim/plugins/liburlpreview.so
-%{_libdir}/qutim/plugins/libyandexnarod.so
+#%{_libdir}/qutim/plugins/libyandexnarod.so
 %{_libdir}/qutim/plugins/libdbusnotifications.so
 %{_libdir}/qutim/plugins/libnowplaying.so
 %{_libdir}/qutim/plugins/libhighlighter.so
@@ -277,7 +283,7 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %{_includedir}/*
 %{_libdir}/libjreen.so
-%{_libdir}/libvreen.so
+#%{_libdir}/libvreen.so
 %{_datadir}/cmake/Modules
 %{_libdir}/pkgconfig/libjreen.pc
 %{_libdir}/pkgconfig/qtdocktile.pc
