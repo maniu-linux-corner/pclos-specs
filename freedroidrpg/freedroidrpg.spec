@@ -1,6 +1,7 @@
 %define name	freedroidrpg
 %define	oname	freedroidRPG
-%define version	0.14.1
+%define version	0.16.0
+%define mversion 0.16
 %define release	%mkrel 1
 %define	Summary	A Diablo clone with the Tux as hero in a world of rampaging robots
 
@@ -9,17 +10,16 @@ Name:		%{name}
 Version:	%{version}
 Release:	%{release}
 URL:		http://freedroid.sourceforge.net/
-Source0:	%{name}-%{version}.tar.bz2
-#Source1:	%{name_lower}-0.9.2.voicesamples.tar.bz2
+Source0:	%{oname}-%{mversion}.tar.gz
 Source11:	%{name}-16x16.png
 Source12:	%{name}-32x32.png
 Source13:	%{name}-48x48.png
-Patch0:		freedroidrpg-0.13-string-format.patch
+
 License:	GPLv2
 Group:		Games/Adventure
-BuildRequires:	libSDL_image-devel libSDL_net-devel libSDL_mixer1.2-devel
-BuildRequires:	libgtk+2.0_0-devel mesa-common-devel
-BuildRequires:	libjpeg62-devel
+BuildRequires:	libSDL_image-devel libSDL_net-devel libSDL_mixer-devel
+BuildRequires:	%{_lib}gtk+2.0_0-devel mesa-common-devel
+BuildRequires:	%{_lib}jpeg-devel
 BuildRequires:	libpng-devel
 BuildRequires:	gettext-devel
 Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
@@ -50,7 +50,7 @@ over your enemies and have them fight on your side."
 
 
 %prep
-%setup -q
+%setup -q -n %{name}-%{mversion}
 # %patch0 -p1 -b .strfmt
 rm -rf `find -name .xvpics`
 
@@ -109,6 +109,14 @@ rm -rf %{buildroot}
 %{_gamesdatadir}/%{name}/dialogs
 %defattr(755,root,root,755)
 %{_gamesbindir}/*
+%{_gamesdatadir}/appdata/freedroidRPG.appdata.xml
+%{_gamesdatadir}/applications/freedroidRPG.desktop
+%{_gamesdatadir}/freedroidrpg/*
+%{_gamesdatadir}/icons/HighContrast/*
+%{_gamesdatadir}/icons/hicolor/*
+%{_mandir}/man6/freedroidRPG.6.bz2
+
+
 
 
 %changelog
