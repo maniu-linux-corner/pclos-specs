@@ -1,7 +1,7 @@
 Name: installer-kde
 Summary: Rychlá instalace programů
-Version: 1.0.12
-Release: 1
+Version: 1.0.15
+Release: 3
 License: GPL v2
 URL: https://pclinuxos.cz
 BuildArch: noarch
@@ -9,20 +9,23 @@ Group: Applications
 Requires: xterm
 Source0: installer-kde-%{version}.tar.xz
 Buildroot: %{_tmppath}/%{name}-%{version}-buildroot
+
+Requires: inxi
+
 %description
 Rychlá instalace programů
 
 Aplikace zjednodušující instalaci vybraných programů, které jsou instalovány nejčastěji
 
 %prep
-%setup -c installer-kde
+%setup -c %{name}
 
 %build
-[ "$RPM_BUILD_ROOT" != "/" ] && rm -rf $RPM_BUILD_ROOT
+mkdir -p $RPM_BUILD_ROOT
 cp -r * $RPM_BUILD_ROOT
 
 %clean
-[ "$RPM_BUILD_ROOT" != "/" ] && rm -rf $RPM_BUILD_ROOT
+
 
 %post
 
@@ -32,11 +35,14 @@ cp -r * $RPM_BUILD_ROOT
 %{_bindir}/test-repo-mank
 %{_sbindir}/*
 %{_datadir}/*
-%{_datadir}/pclinuxos/installer/icons/internet/*
+%{_datadir}/pclinuxos/installer/icons/*
 %{_datadir}/pclinuxos/repo/*
 %{_docdir}/*
-
+/root/.kde4/share/apps/konsole/installer.profile
+%{_bindir}/inst-ver
 
 %changelog
+* Sat Mar 13 2015 Mank <mank@pclinuxos.cz> 1.0.9-1
+- Installer updates
 * Sat Mar 25 2013 Mank <mank@pclinuxos.cz> 1.0.9-1
 - Installer updates

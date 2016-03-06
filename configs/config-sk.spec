@@ -1,13 +1,13 @@
 Name: config-sk
 Summary: Lokalizace systému do slovenštiny
-Version: 1.0.1
-Release: 12
+Version: 1.0.5
+Release: 1
 License: GPL v2
 URL: https://pclinuxos.cz
 BuildArch: noarch
 Group: Applications
 Conflicts: config-cs
-Source0: config-sk-%{version}-12.tar.xz
+Source0: config-sk-%{version}.tar.xz
 Buildroot: %{_tmppath}/%{name}-%{version}-buildroot
 %description
 Lokalizace systému do slovenštiny
@@ -18,7 +18,7 @@ Konfigurační soubory pro úplnou lokalizaci systému do slovenštiny
 
 %build
 [ "$RPM_BUILD_ROOT" != "/" ] && rm -rf $RPM_BUILD_ROOT
-
+mkdir -p $RPM_BUILD_ROOT
 cp -r * $RPM_BUILD_ROOT
 
 %clean
@@ -59,7 +59,6 @@ exit 0
 %{_sysconfdir}/sysconfig/i18n
 %{_sysconfdir}/sysconfig/i18n_AL
 %{_sysconfdir}/xdg/user-dirs.defaults
-%{_datadir}/applications/clementine.desktop
 %{_datadir}/applications/drakfirewall.desktop
 %{_datadir}/applications/draknetcenter.desktop
 %{_datadir}/applications/localedrake-user.desktop
@@ -67,7 +66,6 @@ exit 0
 %{_datadir}/applications/synaptic-kde.desktop
 %{_datadir}/applications/synaptic.desktop
 %{_datadir}/applications/synaptic-aktualizace.desktop
-/.directory
 %{_datadir}/desktop-directories/mandriva-system-archiving.directory
 %{_datadir}/desktop-directories/mandriva-system-configuration.directory
 %{_datadir}/desktop-directories/mandriva-system-filetools.directory
@@ -76,6 +74,9 @@ exit 0
 %{_datadir}/locale/sk/LC_MESSAGES/synaptic.mo
 %{_datadir}/applications/synaptic-aktualizace-kde.desktop
 %{_datadir}/pclinuxos/repo/*
+%{_sbindir}/synaptic-cs-sk.sh
+%{_sbindir}/synaptic-upgrade-cs-sk.sh
+%{_datadir}/desktop-directories/mandriva-moreapplications-communications.directory
 
 %changelog
 * Sat Aug 11 2012 Mank <mank@pclinuxos.cz> 1.0.1-11
