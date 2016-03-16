@@ -1,5 +1,5 @@
 %define name	flare
-%define version	0.19git20150928
+%define version	0.19git20160316
 %define release	%mkrel 1
 %define	Summary	A RPG clone with Smal code base
 
@@ -70,6 +70,8 @@ rm -rf %{buildroot}
 %{_datadir}/flare/*
 
 %changelog
+* Wed Mar 16 2016 Mank <mank@pclinuxos.cz> 0.19-2016
+-	Build for PCLinuxOS (updated)
 * Wed Jun 15 2015 Mank <mank@pclinuxos.cz> 0.19-1
 -	Build for PCLinuxOS (updated)
 * Wed Jun 15 2013 Mank <mank@pclinuxos.cz> 0.19-1

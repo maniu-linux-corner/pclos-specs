@@ -1,7 +1,7 @@
 Name: config-sk
 Summary: Lokalizace systému do slovenštiny
 Version: 1.0.5
-Release: 1
+Release: 2
 License: GPL v2
 URL: https://pclinuxos.cz
 BuildArch: noarch

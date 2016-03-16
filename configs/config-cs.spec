@@ -1,7 +1,7 @@
 Name: config-cs
 Summary: Lokalizace systému do češtiny
 Version: 1.0.5
-Release: 1
+Release: 2
 License: GPL v2
 URL: https://pclinuxos.cz
 BuildArch: noarch
