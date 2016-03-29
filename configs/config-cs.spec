@@ -1,14 +1,14 @@
 Name: config-cs
 Summary: Lokalizace systému do češtiny
-Version: 1.0.5
-Release: 2
+Version: 1.0.6
+Release: 1
 License: GPL v2
 URL: https://pclinuxos.cz
 BuildArch: noarch
 Group: Applications
 Conflicts: config-cs-sk
 Conflicts: config-sk
-Source0: config-cs-%{version}.tar.xz
+Source0: config-cs-%{version}.tar.gz
 Buildroot: %{_tmppath}/%{name}-%{version}-buildroot
 %description
 Lokalizace systému do češtiny
@@ -72,6 +72,7 @@ exit 0
  %{_datadir}/desktop-directories/mandriva-system-archiving.directory
  %{_datadir}/desktop-directories/mandriva-system-configuration.directory
  %{_datadir}/desktop-directories/mandriva-system-filetools.directory
+ %{_datadir}/desktop-directories/mandriva-system-configuration-packaging.directory
 %{_datadir}/desktop-directories/mandriva-system-monitoring.directory
 %{_datadir}/desktop-directories/mandriva-system-terminals.directory
 %{_datadir}/applications/synaptic-aktualizace.desktop

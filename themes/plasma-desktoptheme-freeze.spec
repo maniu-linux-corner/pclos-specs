@@ -1,6 +1,6 @@
 Name:           plasma-desktoptheme-freeze
 Version:        1.3
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        A Plasma Theme for the KDE 4 desktop
 
 License:        GPL
@@ -16,13 +16,14 @@ BuildArch:		noarch
 %setup -q -c %{name}
 
 %install
-%__install -d %{buildroot}%{_datadir}/apps/aurorae/themes/
+%__install -d %{buildroot}%{_datadir}/apps/desktoptheme/
 cd usr/share/apps/aurorae/themes/
-%__cp -rf ./* %{buildroot}%{_datadir}/apps/aurorae/themes/
+%__cp -rf ./* %{buildroot}%{_datadir}/apps/desktoptheme/
 
 
 %files
-%{_datadir}/apps/aurorae/themes/
+%defattr(-,root,root)
+%{_datadir}/apps/desktoptheme/
 
 
 %changelog

@@ -1,13 +1,13 @@
 Name: config-sk
 Summary: Lokalizace systému do slovenštiny
-Version: 1.0.5
-Release: 2
+Version: 1.0.6
+Release: 1
 License: GPL v2
 URL: https://pclinuxos.cz
 BuildArch: noarch
 Group: Applications
 Conflicts: config-cs
-Source0: config-sk-%{version}.tar.xz
+Source0: config-sk-%{version}.tar.gz
 Buildroot: %{_tmppath}/%{name}-%{version}-buildroot
 %description
 Lokalizace systému do slovenštiny
@@ -71,6 +71,7 @@ exit 0
 %{_datadir}/desktop-directories/mandriva-system-filetools.directory
 %{_datadir}/desktop-directories/mandriva-system-monitoring.directory
 %{_datadir}/desktop-directories/mandriva-system-terminals.directory
+%{_datadir}/desktop-directories/mandriva-system-configuration-packaging.directory
 %{_datadir}/locale/sk/LC_MESSAGES/synaptic.mo
 %{_datadir}/applications/synaptic-aktualizace-kde.desktop
 %{_datadir}/pclinuxos/repo/*

@@ -1,17 +1,17 @@
 Name:           nuvola-app-soundcloud
 Version:        master
-Release:        1%{?dist}
-Summary:        deezer support
+Release:        2%{?dist}
+Summary:        soundcloud support
 
 License:        GPL
 URL:            https://github.com/tiliado/nuvola-app-soundcloud
-Source0:        nuvola-app-soundcloud-master.zip
+Source0:        nuvola-app-soundcloud-1.1.tar.gz
 
 %description
 
 
 %prep
-%setup -q
+%setup -q -n nuvola-app-soundcloud-1.1
 
 
 %build
@@ -23,8 +23,8 @@ make %{?_smp_mflags}
 
 
 %files
-/usr/share/nuvolaplayer3/web_apps/soundcloud/*
- /usr/share/icons/hicolor/*
+%{_datadir}/nuvolaplayer3/web_apps/soundcloud/*
+%{_datadir}/icons/hicolor/*
 
 
 %changelog
