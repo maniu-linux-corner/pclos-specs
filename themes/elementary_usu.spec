@@ -1,6 +1,6 @@
 %define name elementary-usu-icon-theme
 %define version 8.0.7
-%define release %mkrel 3
+%define release %mkrel 8 
 
 %define iconsdir %{_datadir}/icons
 

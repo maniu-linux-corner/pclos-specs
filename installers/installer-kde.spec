@@ -1,12 +1,12 @@
 Name: installer-kde
 Summary: Rychlá instalace programů
-Version: 1.0.15
+Version: 1.0.16.01
 Release: 3
 License: GPL v2
 URL: https://pclinuxos.cz
 BuildArch: noarch
 Group: Applications
-Requires: xterm
+Requires: konsole
 Source0: installer-kde-%{version}.tar.xz
 Buildroot: %{_tmppath}/%{name}-%{version}-buildroot
 
@@ -31,6 +31,7 @@ cp -r * $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root)
+%{_datadir}/polkit-1/actions/org.pclinuxos.installer.policy
 %{_bindir}/installer
 %{_bindir}/test-repo-mank
 %{_sbindir}/*
@@ -40,6 +41,7 @@ cp -r * $RPM_BUILD_ROOT
 %{_docdir}/*
 /root/.kde4/share/apps/konsole/installer.profile
 %{_bindir}/inst-ver
+/usr/libexec/installer
 
 %changelog
 * Sat Mar 13 2015 Mank <mank@pclinuxos.cz> 1.0.9-1

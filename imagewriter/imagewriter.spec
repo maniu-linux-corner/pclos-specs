@@ -15,60 +15,23 @@
 # Please submit bugfixes or comments via http://bugs.opensuse.org/
 #
 
-%if 0%{?rhel_version} == 600
-     %define dist el6
-     %define breq qt-devel
-     %define backend hal-devel
-     %define qmake /usr/bin/qmake-qt4
-     %define lrelease /usr/bin/lrelease-qt4
-     %define definedbackend USEHAL
-%endif
+%define breq libqt4-devel
+%define backend udisks2
+%define qmake /usr/lib64/qt4/bin/qmake
+%define lrelease /usr/lib/qt4/bin/lrelease
+%define definedbackend USEUDISKS2
 
-%if 0%{?fedora}
-    %define breq qt4-devel
-    %define backend udisks2
-    %define qmake /usr/bin/qmake-qt4
-    %define lrelease /usr/bin/lrelease-qt4
-    %define definedbackend USEUDISKS2
-%endif
-
-#%if 0%{?mandriva_version}
-    %define breq libqt4-devel
-    %define backend udisks2
-    %define qmake /usr/lib64/qt4/bin/qmake
-    %define lrelease /usr/lib/qt4/bin/lrelease
-    %define definedbackend USEUDISKS2
-#%endif  
-
-%if 0%{?suse_version}
-    %define breq libqt4-devel update-desktop-files
-    %define qmake /usr/bin/qmake
-    %define lrelease /usr/bin/lrelease
-%endif
-
-%if 0%{?suse_version} <= 1130
-    %define backend hal-devel
-    %define definedbackend USEHAL
-%endif
-
-%if 0%{?suse_version} == 1140 || 0%{?suse_version} == 1210
-    %define backend udisks
-    %define definedbackend USEUDISKS
-%endif
-
-%if 0%{?suse_version} >= 1220
-    %define backend udisks2
-    %define definedbackend USEUDISKS2
-%endif
 
 Name:           imagewriter
 Version:        1.10.1396965491.1d253d9
-Release:        0
+Release:        2
 Summary:        Utility for writing disk images to USB keys
 License:        GPL-2.0
 Group:          Hardware/Other
 Url:            https://github.com/openSUSE/imagewriter
 Source0:        imagewriter-%{version}.zip
+Source1:		org.pclinuxos.imagewriter.policy
+Source10:		%{name}
 BuildRequires:  gcc-c++
 BuildRequires:  hicolor-icon-theme
 BuildRequires:  %{breq} %{backend}
@@ -83,10 +46,11 @@ A graphical utility for writing raw disk images & hybrid ISOs to USB keys.
 %setup -q -n imagewriter-master
 
 %build
+# -DKIOSKHACK
 # Create qmake cache file for building and use optflags.
 cat > .qmake.cache <<EOF
 PREFIX=%{_prefix}
-QMAKE_CXXFLAGS_RELEASE += "%{optflags} -DKIOSKHACK"
+QMAKE_CXXFLAGS_RELEASE += "%{optflags}"
 DEFINES=%{definedbackend}
 EOF
 %{qmake}
@@ -97,6 +61,12 @@ make INSTALL_ROOT=%{buildroot} install
 %if 0%{?suse_version}
     %suse_update_desktop_file imagewriter
 %endif
+%__mkdir -p %{buildroot}/usr/libexec/
+%__mv %{buildroot}/usr/bin/%{name} %{buildroot}/usr/libexec/
+%__mkdir -p %{buildroot}/%{_bindir}/
+%__mkdir -p %{buildroot}/%{_datadir}/polkit-1/actions/
+install -D %{SOURCE10} %{buildroot}/%{_bindir}/
+install -Dm644 %{SOURCE1} %{buildroot}/%{_datadir}/polkit-1/actions/org.pclinuxos.imagewriter.policy
 
 %if 0%{?suse_version} >= 1140
 %post
@@ -111,13 +81,12 @@ make INSTALL_ROOT=%{buildroot} install
 %files
 %defattr(-,root,root)
 %doc COPYING
-%{_bindir}/imagewriter
+%{_bindir}/%{name}
+/usr/libexec/%{name}
 %{_datadir}/applications/imagewriter.desktop
 %{_datadir}/icons/hicolor/*/apps/imagewriter.*
-
+%{_datadir}/polkit-1/actions/org.pclinuxos.imagewriter.policy
 %{_mandir}/man1/imagewriter.1.*
-
-#%{_mandir}/man1/imagewriter.1%{?ext_man}
 
 
 %changelog
