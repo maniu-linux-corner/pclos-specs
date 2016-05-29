@@ -1,31 +1,31 @@
 Name: task-LO-sk-lang
 Summary: Task for Office Suite (sk lang files)
-Version: 3.6
+Version: 5.1
 Release: 1
 License: LGPLv3
 URL: http://www.libreoffice.org/
 Group: Tasks
 BuildArch: noarch
 Requires: task-LO
-Requires: libobasis3.6-sk-base
-Requires: libobasis3.6-sk-calc
-Requires: libobasis3.6-sk-math
-Requires: libobasis3.6-sk-res
-Requires: libobasis3.6-sk-writer
-Requires: libobasis3.6-sk
-Requires: libreoffice3.6-sk
-Requires: libreoffice3.6-dict-sk
-Requires: libobasis3.6-sk-help
+Requires: libobasis5.1-sk-base
+Requires: libobasis5.1-sk-calc
+Requires: libobasis5.1-sk-math
+Requires: libobasis5.1-sk-res
+Requires: libobasis5.1-sk-writer
+Requires: libobasis5.1-sk
+Requires: libreoffice5.1-sk
+Requires: libreoffice5.1-dict-sk
+Requires: libobasis5.1-sk-help
 
-Conflicts: libobasis3.5-sk-base
-Conflicts: libobasis3.5-sk-calc
-Conflicts: libobasis3.5-sk-math
-Conflicts: libobasis3.5-sk-res
-Conflicts: libobasis3.5-sk-writer
-Conflicts: libobasis3.5-sk
-Conflicts: libreoffice3.5-sk
-Conflicts: libreoffice3.5-dict-sk
-Conflicts: libobasis3.5-sk-help
+Conflicts: libobasis5.0-sk-base
+Conflicts: libobasis5.0-sk-calc
+Conflicts: libobasis5.0-sk-math
+Conflicts: libobasis5.0-sk-res
+Conflicts: libobasis5.0-sk-writer
+Conflicts: libobasis5.0-sk
+Conflicts: libreoffice5.0-sk
+Conflicts: libreoffice5.0-dict-sk
+Conflicts: libobasis5.0-sk-help
 
 Buildroot: %{_tmppath}/%{name}-%{version}-buildroot
 %description
