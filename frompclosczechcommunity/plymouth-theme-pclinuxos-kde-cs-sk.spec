@@ -5,7 +5,7 @@ Summary:        Téma pro Plymouth
 
 License:        GPLv3
 URL:            pclinuxos.cz
-Source0:       plymouth-theme-pclinuxos-kde-cs-sk.tar.xz 
+Source0:       plymouth-theme-pclinuxos-cs-sk.tar.xz 
 BuildArch: noarch
 Requires:  plymouth  bootsplash      
 
@@ -13,7 +13,7 @@ Requires:  plymouth  bootsplash
 Téma pro CZ/SK vydání LiveDVD KDE a KDE Plus 
 
 %prep
-%setup -q -n plymouth-theme-pclinuxos-kde-cs-sk
+%setup -q -c plymouth-theme-pclinuxos-cs-sk
 
 %build
 
@@ -25,8 +25,8 @@ cp -R ./ $RPM_BUILD_ROOT/
 /usr/share/bootsplash/scripts/remove-theme
 
 %post
-/usr/sbin/plymouth-set-default-theme PCLinuxOS-KDE
-/usr/share/bootsplash/scripts/switch-themes PCLinuxOS-KDE
+/usr/sbin/plymouth-set-default-theme caledonia-pclos.
+/usr/share/bootsplash/scripts/switch-themes caledonia-pclos
 
 %postun
 if [ "$1" = 0 ]; then
@@ -35,7 +35,7 @@ if [ "$1" = 0 ]; then
 fi
 
 %files
-%{_datadir}/plymouth/themes/PCLinuxOS-KDE/*
+%{_datadir}/plymouth/themes/caledonia.pclos/*
 
 %changelog
 * Sat Jul 26 2014 Mank <mank@pclinuxos.cz> 1.0.0-1

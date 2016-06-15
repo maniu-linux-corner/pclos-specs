@@ -1,12 +1,13 @@
 Name: task-LO
 Summary: Task for Office Suite (core)
 Version: 5.1
-Release: 3
+Release: 4
 License: LGPLv3
 URL: http://www.libreoffice.org/
 Group: Tasks
 BuildArch: noarch
 
+Requires: libreoffice5.1-freedesktop-menus
 Requires: libobasis5.1-librelogo
 Requires: libobasis5.1-python-script-provider
 Requires: libobasis5.1-filter-data
