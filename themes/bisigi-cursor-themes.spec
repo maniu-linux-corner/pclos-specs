@@ -52,7 +52,7 @@ cd ..
 
 
 %changelog
-* Fri Apr 29 2014 Mank <mank@pclinuxos.cz> 2.0-1mank2014
+* Fri Apr 29 2014 Mank <mank dot pclos at gmail dot com> 2.0-1mank2014
 - First time ported to Mandriva by MIB.
 * Fri Feb 11 2011 Cristobal Lopez <lopeztobal@gmail.com> 0.3-1mib2010.2
 - First time ported to Mandriva by MIB.
