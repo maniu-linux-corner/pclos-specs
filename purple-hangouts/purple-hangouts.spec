@@ -76,7 +76,7 @@ install -p hangouts48.png %{buildroot}%{_datadir}/pixmaps/pidgin/protocols/48/%{
 %{_datadir}/pixmaps/pidgin/protocols/*/%{plugin_name}.png
 
 %changelog
-* Mon Mar 23 2016 Mank <Mank@pclinuxos.cz> - 1.0-1.20160227hga2c9af3
+* Mon Mar 23 2016 Mank <Mank dot pclos at gmail dot com> - 1.0-1.20160227hga2c9af3
 - build for pclinuxos distro , import
 * Mon Feb 29 2016 V1TSK <vitaly@easycoding.org> - 1.0-1.20160227hga2c9af3
 - First SPEC version.

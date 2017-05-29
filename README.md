@@ -1,4 +1,4 @@
 specs
 =====
 
-specs for pclinuxos.cz repository
+specs files for pclinuxos (cz&sk) repository

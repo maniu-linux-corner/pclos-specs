@@ -10,7 +10,7 @@ Source0:        %{name}.tar.xz
 
 %description
 
-Téma Caledonia KDM pro Live DVD PCLinuxOS.cz 2016
+Téma Caledonia KDM pro Live DVD https://github.com/pclinuxoscz/specs 2016
 
 Odkaz: http://kde-look.org/content/show.php/Caledonia+KDM?content=143130
 

@@ -54,6 +54,6 @@ tar -xf gtk-themes.tar.gz
 
 
 %changelog
-* Tue Dec 30 2014 mank <mank@pclinuxos.cz>
+* Tue Dec 30 2014 mank <mank dot pclos at gmail dot com>
 - built
 

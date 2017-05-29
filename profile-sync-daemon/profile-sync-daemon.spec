@@ -71,5 +71,5 @@ sed -e "s/tmpfs/#tmpfs/" /etc/fstab-psdrm > /etc/fstab
 
 
 %changelog
-* Wed May 29 2015 Mank <mank@pclinuxos.cz> - 5.35-5
+* Wed May 29 2015 Mank <Mank dot pclos at gmail dot com> - 5.35-5
 - Initial Package.

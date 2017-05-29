@@ -3,7 +3,7 @@ Summary: Lokalizace systému do češtiny
 Version: 1.0.0
 Release: 10
 License: GPL v2
-URL: https://pclinuxos.cz
+URL: https://https://github.com/pclinuxoscz/specs
 BuildArch: noarch
 Group: Applications
 Conflicts: config-cs-sk
@@ -63,5 +63,5 @@ sed -e "s/#   dos charset = 850/ dos charset = 852/" -e "s/#   unix charset = IS
 %{_datadir}/applications/synaptic-aktualizace-kde.desktop
 
 %changelog
-* Sat Aug 11 2012 Mank <mank@pclinuxos.cz> 1.0.0-1
+* Sat Aug 11 2012 Mank <Mank dot pclos at gmail dot coms> 1.0.0-1
 -

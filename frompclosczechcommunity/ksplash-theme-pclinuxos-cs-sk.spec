@@ -11,7 +11,7 @@ Source0:        %{name}.tar.xz
 %description
 Téma pro KSPlash
 
-Upravené téma KStarboard Splash pro Live DVD PCLinuxOS.cz 2016
+Upravené téma KStarboard Splash pro Live DVD https://github.com/pclinuxoscz/specs 2016
 
 Odkaz: http://kde-look.org/content/show.php/KStarboard+Splash?content=119216
 

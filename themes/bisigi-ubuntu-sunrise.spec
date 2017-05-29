@@ -77,7 +77,7 @@ cd ..
 %{wallpaperspropdir}/*
 
 %changelog
-* Fri Apr 29 2014 Mank <mank@pclinuxos.cz> 3.0.0-2mank2014
+* Fri Apr 29 2014 Mank <mank dot pclos at gmail dot com> 3.0.0-2mank2014
 - Update
 
 * Fri Feb 11 2011 Cristobal Lopez <lopeztobal@gmail.com> 2.4.1-1mib2010.2

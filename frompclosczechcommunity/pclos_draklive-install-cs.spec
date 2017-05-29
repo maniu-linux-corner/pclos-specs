@@ -3,7 +3,7 @@ Summary: A Live install for cs/sk locales
 Version: 1.0.0
 Release: 1
 License: GPL v2
-URL: https://pclinuxos.cz
+URL: https://https://github.com/pclinuxoscz/specs
 BuildArch: noarch
 Group: Applications
 Requires: draklive-install
@@ -55,5 +55,5 @@ cp -r * $RPM_BUILD_ROOT
 
 
 %changelog
-* Sat Aug 11 2012 Mank <mank@pclinuxos.cz> 1.0.1-2
+* Sat Aug 11 2012 Mank <Mank dot pclos at gmail dot com> 1.0.1-2
 - 

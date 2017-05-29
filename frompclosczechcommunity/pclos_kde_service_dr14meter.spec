@@ -3,7 +3,7 @@ Summary: A Kde Service menu for dr14tmeter
 Version: 0.0.1
 Release: 2
 License: GPL v2
-URL: https://pclinuxos.cz
+URL: https://https://github.com/pclinuxoscz/specs
 Group: Applications
 BuildArch: noarch
 Source0: dr14tmeter-KDE.tar.gz
@@ -37,5 +37,5 @@ cp -r ./usr/share/kde4/services/ServiceMenus/ $RPM_BUILD_ROOT/usr/share/kde4/ser
 
 
 %changelog
-* Sat Mar 25 2011 Mank <mank@pclinuxos.cz> 0.0.1-1
-- Kde 4 service menus (autor migelo <migelo@pclinuxos.cz> )
+* Sat Mar 25 2011 Mank <Mank dot pclos at gmail dot com> 0.0.1-1
+- Kde 4 service menus (autor migelo <migelo dot pclos at gmail dot com> )

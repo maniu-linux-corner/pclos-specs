@@ -3,7 +3,7 @@ Summary: Konfigurace prostředí KDE SC pro české uživatele
 Version: 1.0.1
 Release: 5
 License: GPL v2
-URL: https://pclinuxos.cz
+URL: https://https://github.com/pclinuxoscz/specs
 BuildArch: noarch
 Group: Applications
 Conflicts: kde4-config
@@ -249,5 +249,5 @@ rm /tmp/en-na-cs-kde.sh
 
 
 %changelog
-* Sat Aug 11 2012 Mank <mank@pclinuxos.cz> 1.0.0-1
+* Sat Aug 11 2012 Mank <Mank dot pclos at gmail dot coms> 1.0.0-1
 -

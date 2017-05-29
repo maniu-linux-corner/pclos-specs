@@ -55,5 +55,5 @@ find $RPM_BUILD_ROOT -name '*.la' -exec rm -f {} ';'
 
 
 %changelog
-* Sat Jun 13 2015 Mank <mank@pclinuxos.cz> 0.1.0
+* Sat Jun 13 2015 Mank <mank dot pclos at gmail dot com> 0.1.0
 - Init spec file

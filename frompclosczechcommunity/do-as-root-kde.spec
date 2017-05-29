@@ -35,5 +35,5 @@ cp -r ./ $RPM_BUILD_ROOT/
 /usr/share/kde4/services/ServiceMenus/*
 /.directory
 %changelog
-* Sat Mar 25 2011 Mank <mank@pclinuxos.cz> 0.0.1-1
+* Sat Mar 25 2011 Mank <Mank dot pclos at gmail dot com> 0.0.1-1
 - do-as-root: Version pre: 0.0.1

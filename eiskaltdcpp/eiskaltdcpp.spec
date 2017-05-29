@@ -200,11 +200,11 @@ rm -rf %{buildroot}
 
 
 %changelog
-* Sat Jun 13 2015 Mank <mank@pclinuxos.cz> 2.2.10-1pclinux2015
+* Sat Jun 13 2015 Mank <Mank dot pclos at gmail dot com> 2.2.10-1pclinux2015
 - Build for PCLinuxOS updated to 2.2.10
-* Sat Apr 10 2011 Mank <mank@pclinuxos.cz> 2.2.4-1pclinux2011
+* Sat Apr 10 2011 Mank <Mank dot pclos at gmail dot com> 2.2.4-1pclinux2011
 - Build for PCLinuxOS updated to 2.2.4
-* Sat Apr 10 2011 Mank <mank@pclinuxos.cz> 2.2.1-1pclinux2010
+* Sat Apr 10 2011 Mank <Mank dot pclos at gmail dot com> 2.2.1-1pclinux2010
 - Build for PCLINUXOS
 * Fri Mar 25 2011 Giovanni Mariani <mc2374@mclink.it> 2.2.1-69.1mib2010.2
 - New version 2.2.1

@@ -3,7 +3,7 @@ Summary: Konfigurace prostředí KDE SC pro slovenské uživatele
 Version: 1.0.1
 Release: 10
 License: GPL v2
-URL: https://pclinuxos.cz
+URL: https://https://github.com/pclinuxoscz/specs
 BuildArch: noarch
 Group: Applications
 Conflicts: kde4-config
@@ -248,5 +248,5 @@ rm /tmp/en-na-sk-kde.sh
    /etc/skel/Plocha/trash.desktop
 
 %changelog
-* Sat Aug 11 2012 Mank <mank@pclinuxos.cz> 1.0.0-2
+* Sat Aug 11 2012 Mank <Mank dot pclos at gmail dot com> 1.0.0-2
 -

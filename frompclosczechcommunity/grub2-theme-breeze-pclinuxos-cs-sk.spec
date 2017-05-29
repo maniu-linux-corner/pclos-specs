@@ -10,7 +10,7 @@ Source0:        %{name}.tar.xz
 
 %description
 
-Upravené téma Breeze pro Live DVD PCLinuxOS.cz 2016
+Upravené téma Breeze pro Live DVD https://github.com/pclinuxoscz/specs 2016
 
 Odkaz: http://kde-look.org/content/show.php/Breeze+GRUB2+theme?content=171217
 

@@ -61,7 +61,7 @@ rm -rf %{buildroot}
 %{_datadir}/pixmaps/*.png
 
 %changelog
-* Thu Apr 29 2014 Mank <mank@pclinuxos.cz> 0.1.2-1pclos2012
+* Thu Apr 29 2014 Mank <Mank dot pclos at gmail dot com> 0.1.2-1pclos2012
 - Build for PCLinuxOS
 
 * Fri Jul 16 2010 Doktor5000 <rpm@mandrivauser.de> 0.1.2-1mud2010.1

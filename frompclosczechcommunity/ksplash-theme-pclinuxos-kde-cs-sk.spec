@@ -4,7 +4,7 @@ Release:        2%{?dist}
 Summary:      Téma pro KSplash  
 
 License:        GPLv3
-URL:            pclinuxos.cz
+URL:            https://github.com/pclinuxoscz/specs
 Source0:        ksplash-theme-pclinuxos-kde-cs-sk.tar.xz
 BuildArch: noarch
 Requires:  kde-baseapps     

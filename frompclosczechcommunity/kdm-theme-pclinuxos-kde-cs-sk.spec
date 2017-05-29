@@ -4,7 +4,7 @@ Release:        1%{?dist}
 Summary:        Téma pro KDM
 
 License:        GPLv3
-URL:            pclinuxos.cz
+URL:            https://github.com/pclinuxoscz/specs
 Source0:        kdm-theme-pclinuxos-kde-cs-sk.tar.xz
 BuildArch: noarch
 Requires:    kdm   

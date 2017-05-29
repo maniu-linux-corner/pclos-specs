@@ -10,7 +10,7 @@ Source0:        %{name}.tar.xz
 
 %description
 
-Téma pro Live DVD PCLinuxOS.cz 2016
+Téma pro Live DVD https://github.com/pclinuxoscz/specs 2016
 
 Použita tapeta z kolekce Caledoina
 
@@ -23,6 +23,6 @@ Odkaz: http://kde-look.org/content/show.php/Caledonia+Official+Wallpapers?conten
 cp -r * $RPM_BUILD_ROOT
 
 %files
-%{_datadir}/gfxboot/themes/pclinuxos.cz/*
+%{_datadir}/gfxboot/themes/https://github.com/pclinuxoscz/specs/*
 
 %changelog

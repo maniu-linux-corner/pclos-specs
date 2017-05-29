@@ -40,5 +40,5 @@ mv -Tf webkit.so $RPM_BUILD_ROOT/usr/lib/pidgin/webkit.so
 %{_bindir}/adium-pidgin
 
 %changelog
-* Sat Mar 25 2013 Mank <mank@pclinuxos.cz> 69-1
+* Sat Mar 25 2013 Mank <mank dot pclos at gmail dot com> 69-1
 - pidgin-webkit: Version pre: 69

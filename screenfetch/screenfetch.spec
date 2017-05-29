@@ -37,5 +37,5 @@ cp README.mkdn $RPM_BUILD_ROOT/usr/share/doc/screenfetch/README.mkdn
 %{_bindir}/screenfetch-dev
 
 %changelog
-* Sat Mar 25 2013 Mank <mank@pclinuxos.cz> 1git14072013-1
+* Sat Mar 25 2013 Mank <mank.pclos at gmail dot com> 1git14072013-1
 - Init Spec

@@ -70,9 +70,9 @@ rm -rf %{buildroot}
 %{_datadir}/flare/*
 
 %changelog
-* Wed Mar 16 2016 Mank <mank@pclinuxos.cz> 0.19-2016
+* Wed Mar 16 2016 Mank <Mank dot pclos at gmail dot com> 0.19-2016
 -	Build for PCLinuxOS (updated)
-* Wed Jun 15 2015 Mank <mank@pclinuxos.cz> 0.19-1
+* Wed Jun 15 2015 Mank <Mank dot pclos at gmail dot com> 0.19-1
 -	Build for PCLinuxOS (updated)
-* Wed Jun 15 2013 Mank <mank@pclinuxos.cz> 0.19-1
+* Wed Jun 15 2013 Mank <Mank dot pclos at gmail dot com> 0.19-1
 -	Build for PCLinuxOS

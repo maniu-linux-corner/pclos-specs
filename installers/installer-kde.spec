@@ -3,7 +3,7 @@ Summary: Rychlá instalace programů
 Version: 1.0.16.01
 Release: 3
 License: GPL v2
-URL: https://pclinuxos.cz
+URL: https://https://github.com/pclinuxoscz/specs
 BuildArch: noarch
 Group: Applications
 Requires: konsole
@@ -44,7 +44,7 @@ cp -r * $RPM_BUILD_ROOT
 /usr/libexec/installer
 
 %changelog
-* Sat Mar 13 2015 Mank <mank@pclinuxos.cz> 1.0.9-1
+* Sat Mar 13 2015 Mank <Mank dot pclos at gmail dot com> 1.0.9-1
 - Installer updates
-* Sat Mar 25 2013 Mank <mank@pclinuxos.cz> 1.0.9-1
+* Sat Mar 25 2013 Mank <Mank dot pclos at gmail dot com> 1.0.9-1
 - Installer updates

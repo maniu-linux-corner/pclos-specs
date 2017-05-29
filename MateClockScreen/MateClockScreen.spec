@@ -32,5 +32,5 @@ make clean
 %{_datadir}/applications/screensavers/anclock.desktop
 
 %changelog
-* Sat Dec 12 2013 Mank <mank@pclinuxos.cz> 1.0.1-2
+* Sat Dec 12 2013 Mank <Mank dot pclos at gmail dot com> 1.0.1-2
 - anclock: Version 1.0.1

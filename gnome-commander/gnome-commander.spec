@@ -74,7 +74,7 @@ desktop-file-install --vendor="" \
 %{_datadir}/appdata/gnome-commander.appdata.xml
 
 %changelog
-* Fri May 30 2014 Mank <Mank@pclinuxos.cz> 1.4.3-1
+* Fri May 30 2014 Mank <MMank dot pclos at gmail dot com> 1.4.3-1
 + Build for PCLOS
 - new version 1.4.3
 * Fri May 30 2014 ovitters <ovitters> 1.4.2-1.mga5

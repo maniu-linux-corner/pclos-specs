@@ -4,7 +4,7 @@ Release:        1%{?dist}
 Summary:        Téma pro QtCurve
 BuildArch:	noarch
 License:        GPLv3
-URL:            pclinuxos.cz
+URL:            https://github.com/pclinuxoscz/specs
 Source0:        qtcurve-pclinuxos-kde-cs-sk.tar.xz
 
 Requires:   kde4-style-qtcurve qtcurve-gtk2

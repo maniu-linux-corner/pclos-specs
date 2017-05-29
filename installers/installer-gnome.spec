@@ -3,7 +3,7 @@ Summary: Jednoduchý Instaler pro CZ&SK (Gnome)
 Version: 1.0.12
 Release: 2
 License: GPL v2
-URL: https://pclinuxos.cz
+URL: https://https://github.com/pclinuxoscz/specs
 BuildArch: noarch
 Group: Applications
 Requires: xterm
@@ -32,5 +32,5 @@ cp -r * $RPM_BUILD_ROOT
 %{_datadir}/*
 
 %changelog
-* Sat Aug 11 2014 Mank <mank@pclinuxos.cz> 1.0.11-1
+* Sat Aug 11 2014 Mank <Mank dot pclos at gmail dot com 1.0.11-1
 - Installer (Gnome)

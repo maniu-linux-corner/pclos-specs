@@ -3,7 +3,7 @@ Summary: Task pro KDE SC SK
 Version: 1.0.2
 Release: 2
 License: LGPLv3
-URL: http://www.pclinuxos.cz/
+URL: http://www.https://github.com/pclinuxoscz/specs/
 Group: Tasks
 BuildArch: noarch
 Requires: DoAsRoot-cs-sk kde4-config-sk config-sk akonadi kde-smooth-tasks kde-baseapps-core kde-baseapps-dolphin 
@@ -19,5 +19,5 @@ Task pro CZ KDE
 %files
 
 %changelog
-* Sat Mar 25 2012 Mank <mank@pclinuxos.cz> 2.2.0.35-1
+* Sat Mar 25 2012 Mank <Mank dot pclos at gmail dot com> 2.2.0.35-1
 - initial task packages

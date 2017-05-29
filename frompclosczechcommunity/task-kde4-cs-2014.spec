@@ -3,7 +3,7 @@ Summary: Task pro KDE SC CS
 Version: 2014
 Release: 4
 License: LGPLv3
-URL: http://www.pclinuxos.cz/
+URL: http://www.https://github.com/pclinuxoscz/specs/
 Group: Tasks
 BuildArch: noarch
 Requires: DoAsRoot-cs-sk kde4-config-cs-2014 config-cs akonadi kde-smooth-tasks kde-baseapps-core kde-baseapps-dolphin 
@@ -23,5 +23,5 @@ yes "" | sensors-detect
 %files
 
 %changelog
-* Sat Mar 25 2012 Mank <mank@pclinuxos.cz> 2.2.0.35-1
+* Sat Mar 25 2012 Mank <Mank dot pclos at gmail dot com> 2.2.0.35-1
 - initial task packages

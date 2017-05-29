@@ -9,7 +9,7 @@ Release:	%{release}
 Source0:	Simply_Grace.tar.gz
 License:	GPL
 Group:		Graphical desktop/GNOME
-URL:		http://pclinuxos.cz/
+URL:		http://https://github.com/pclinuxoscz/specs/
 BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildArch:	noarch
 Requires:	gdm
@@ -36,5 +36,5 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
-* Tue Jun 2 2011 Mank <mank1 at seznam dot cz> 0.1-1pclos2011
+* Tue Jun 2 2011 Mank <Mank dot pclos at gmail dot com> 0.1-1pclos2011
 - first build

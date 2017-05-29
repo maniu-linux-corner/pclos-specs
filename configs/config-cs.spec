@@ -3,7 +3,7 @@ Summary: Lokalizace systému do češtiny
 Version: 1.0.6
 Release: 1
 License: GPL v2
-URL: https://pclinuxos.cz
+URL: https://https://github.com/pclinuxoscz/specs
 BuildArch: noarch
 Group: Applications
 Conflicts: config-cs-sk
@@ -84,7 +84,7 @@ exit 0
 
 
 %changelog
-* Sat Aug 11 2013 Mank <Mank@pclinuxos.cz> 1.0.1-11
+* Sat Aug 11 2013 Mank <Mank dot pclos at gmail dot com> 1.0.1-11
 - some updates.
-* Sat Aug 11 2012 Mank <Mank1@seznam.cz> 1.0.0-10
+* Sat Aug 11 2012 Mank <Mank dot pclos at gmail dot com> 1.0.0-10
 - initial version

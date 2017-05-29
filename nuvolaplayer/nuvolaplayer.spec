@@ -60,5 +60,5 @@ xvfb-run -a dbus-launch ./waf build
 %{_datadir}/vala/vapi/*
 
 %changelog
-* Sat Mar 25 2014 Mank <mank@pclinuxos.cz> 2.3.1-1
+* Sat Mar 25 2014 Mank <Mank dot pclos at gmail dot com> 2.3.1-1
 - Init Spec

@@ -4,7 +4,7 @@ Release:        1%{?dist}
 Summary:        PCLinuxOS Flat 2016 CZ / SK
 
 License:        GPL
-URL:            pclinuxos.cz
+URL:            https://github.com/pclinuxoscz/specs
 Source0:        pclinuxos-icon-theme-cs-sk-%{version}.tar.xz
 BuildArch:		noarch
 

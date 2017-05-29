@@ -3,7 +3,7 @@ Summary: Lokalizace systému do slovenštiny
 Version: 1.0.6
 Release: 1
 License: GPL v2
-URL: https://pclinuxos.cz
+URL: https://https://github.com/pclinuxoscz/specs
 BuildArch: noarch
 Group: Applications
 Conflicts: config-cs
@@ -80,5 +80,5 @@ exit 0
 %{_datadir}/desktop-directories/mandriva-moreapplications-communications.directory
 
 %changelog
-* Sat Aug 11 2012 Mank <mank@pclinuxos.cz> 1.0.1-11
+* Sat Aug 11 2012 Mank <Mank dot pclos at gmail dot com> 1.0.1-11
 -

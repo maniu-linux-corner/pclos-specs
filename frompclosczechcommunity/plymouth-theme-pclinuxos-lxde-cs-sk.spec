@@ -4,7 +4,7 @@ Release:        1%{?dist}
 Summary:        Téma pro Plymouth
 
 License:        GPLv3
-URL:            pclinuxos.cz
+URL:            https://github.com/pclinuxoscz/specs
 Source0:       plymouth-theme-lxde-cs-sk.tar.xz 
 BuildArch: noarch
 Requires:  plymouth  bootsplash      
@@ -38,6 +38,6 @@ fi
 %{_datadir}/plymouth/themes/PCLinuxOS-LXDE
 
 %changelog
-* Sat Jul 26 2014 Mank <mank@pclinuxos.cz> 1.0.0-1
+* Sat Jul 26 2014 Mank <Mank dot pclos at gmail dot com> 1.0.0-1
 - Version 1.0.0 
 - intial version of rpm

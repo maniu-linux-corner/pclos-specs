@@ -3,7 +3,7 @@ Summary: Uvitani na Live CD/DVD pro KDE
 Version: 0.0.1
 Release: 1
 License: GPLv2
-URL: http://pclinuxos.cz
+URL: http://https://github.com/pclinuxoscz/specs
 Group: Graphical desktop/KDE
 Source0: guest_uvitani.tar.xz
 Requires: glibc
@@ -32,5 +32,5 @@ cp -r ./ $RPM_BUILD_ROOT/
 /usr/share/pclinuxos/pics/*
 /home/guest/.kde4/*
 %changelog
-* Sat Mar 25 2011 Mank <mank@pclinuxos.cz> 0.0.1-1
+* Sat Mar 25 2011 Mank <Mank dot pclos at gmail dot com> 0.0.1-1
 - guest-welccome: Version pre: 0.0.1

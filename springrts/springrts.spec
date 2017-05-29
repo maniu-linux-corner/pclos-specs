@@ -45,6 +45,6 @@ rm -rf %{buildroot}
 #%{_iconsdir}/hicolor/scalable/apps/*
 
 %changelog
-* Wed May 28 2012 Mank <mank@pclinuxos.cz> 0.91-1pclinux2012.1
+* Wed May 28 2012 Mank <Mank dot pclos at gmail dot com> 0.91-1pclinux2012.1
 -	Build for PCLinuxOS
 

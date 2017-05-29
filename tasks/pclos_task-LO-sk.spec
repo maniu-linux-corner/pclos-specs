@@ -34,5 +34,5 @@ LibreOffice is the power-packed free, libre and open source personal productivit
 %files
 
 %changelog
-* Sat Mar 25 2011 Mank <mank@pclinuxos.cz> 3.6-1
+* Sat Mar 25 2011 Mank <Mank dot pclos at gmail dot com> 3.6-1
 - initial task packages

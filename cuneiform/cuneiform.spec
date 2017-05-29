@@ -82,8 +82,8 @@ rm -rf %{buildroot}
 
 
 %changelog
-* Thu Apr 29 2014 Mank <mank@pclinuxos.cz> 1.1.0-1pclos2012
-- Build for PCLinuxOS
+* Thu Apr 29 2014 Mank <Mank dot pclos at gmail dot com> 1.1.0-1pclos2012
+- Build/import for PCLinuxOS
 
 * Sun Jan 15 2012 Dmitry Mikhirev <dmikhirev@mandriva.org> 1.1.0-2mdv2011.0
 + Revision: 761431

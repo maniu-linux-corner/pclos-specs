@@ -63,6 +63,6 @@ fi
 %config /etc/mcc.conf
 
 %changelog
-* Fri Jul 28 2013 Mank <mank@pclinuxos.cz> 2012-1
+* Fri Jul 28 2013 Mank <Mank dot pclos at gmail dot com> 2012-1
 - Init spec
 

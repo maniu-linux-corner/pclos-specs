@@ -11,9 +11,9 @@ BuildArch:		noarch
 
 %description
 
-Tapety pro Live DVD PClinuxOS.cz
+Tapety pro Live DVD https://github.com/pclinuxoscz/specs
 
-Wallpapers for Live DVD PCLinuxOS.cz
+Wallpapers for Live DVD https://github.com/pclinuxoscz/specs
 
 Author: Miroslav Řehulka
 Email: rehulkamirek@seznam.cz

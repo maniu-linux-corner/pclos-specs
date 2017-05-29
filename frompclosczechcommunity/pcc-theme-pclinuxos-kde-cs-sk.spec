@@ -4,7 +4,7 @@ Release:        1%{?dist}
 Summary:        Téma pro PCC
 
 License:      	GPLv3  
-URL:            pclinuxos.cz
+URL:            https://github.com/pclinuxoscz/specs
 Source0:        pcc-theme-pclinuxos-kde-cs-sk.tar.xz
 BuildArch:	noarch 
 Requires:       drakconf

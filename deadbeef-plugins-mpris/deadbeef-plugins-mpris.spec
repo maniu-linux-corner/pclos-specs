@@ -18,7 +18,7 @@ A dbus-plugin for deadbeef
 
 %build
 patch -i %{SOURCE1}
-./configure --prefix=/usr --libdir=%{_libdir}
+%configure --prefix=/usr --libdir=%{_libdir}
 make
 
 %install
@@ -34,5 +34,5 @@ make DESTDIR="$RPM_BUILD_ROOT" install
 %{_libdir}/deadbeef/*
 
 %changelog
-* Sat Apr 25 2014 Mank <mank@pclinuxos.cz> 2.1.5-3
+* Sat Apr 25 2014 Mank <Mank dot pclos at gmail dot com> 2.1.5-3
 - deadbeef-mpris: Version : 2.1.5

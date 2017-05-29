@@ -29,6 +29,6 @@ A gtk theme ClearLook Industrial
 
 
 %changelog
-* Fri Apr 28 2014 Mank <mank@pclinuxos.cz> 1.0.0-2
+* Fri Apr 28 2014 Mank <mank dot pclos at gmail dot com> 1.0.0-2
 - Init spec
 
