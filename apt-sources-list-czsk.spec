@@ -4,7 +4,7 @@ Version: 1.0.0
 Release: %mkrel 2
 License: GPL
 Group: System/Configuration/Packaging
-URL: http://pclinuxos.cz/
+URL: https://github.com/pclinuxoscz/
 Source:      %name-%version.tar.xz
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
@@ -38,5 +38,5 @@ rm -rf %{buildroot}
 %{_sysconfdir}/apt/sources.list.d/cs-sk.list
 
 %changelog
-* Wed Oct 02 2016 Mank <mank at pclinuxos.cz> 1.0.0-1pclos2016
+* Wed Oct 02 2016 Mank <mank at void . cet> 1.0.0-1pclos2016
 - create
