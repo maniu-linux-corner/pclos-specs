@@ -45,7 +45,7 @@ install -D -m644 "%{SOURCE1}" "$RPM_BUILD_ROOT/usr/share/applications/wdt.deskto
 %{_datadir}/*
 
 %changelog
-* Sat Mar 25 2012 Mank <Mank1@seznam.cz> 2.6.6-3
+* Sat Mar 25 2012 M <me+pclosgit@maniu.eu> 2.6.6-3
 - WDT Repair Desktop Icons
-* Sat Mar 25 2012 Mank <Mank1@seznam.cz> 2.6.6-2
+* Sat Mar 25 2012 M <me+pclosgit@maniu.eu> 2.6.6-2
 - WDT
