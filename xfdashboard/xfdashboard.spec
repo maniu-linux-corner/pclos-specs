@@ -62,9 +62,5 @@ find %{buildroot} -name '*.la' -delete
 %{_includedir}/%{name}/*
 
 %changelog
-* Sun Mar 22 2016 Mank <mank.pclos at gmail dot com> 0.6.0-1mank2016
+* Sun Mar 22 2016 M <me@maniu.eu> 0.6.0-1mank2016
 - 0.6.0
-* Fri Aug 14 2015 Mank <mank.pclos at gmail dot com> 0.4.1-1mank2015
-- 0.4.1
-* Fri Jun 8 2014 Mank <mank.pclos at gmail dot com> 0.2.4-1mank2014
-- 0.2.4
