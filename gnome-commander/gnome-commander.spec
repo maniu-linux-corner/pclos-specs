@@ -74,7 +74,7 @@ desktop-file-install --vendor="" \
 %{_datadir}/appdata/gnome-commander.appdata.xml
 
 %changelog
-* Fri May 30 2014 Mank <MMank dot pclos at gmail dot com> 1.4.3-1
+* Fri May 30 2014 Maniu <me  at maniu dot eu> 1.4.3-1
 + Build for PCLOS
 - new version 1.4.3
 * Fri May 30 2014 ovitters <ovitters> 1.4.2-1.mga5
@@ -215,7 +215,7 @@ desktop-file-install --vendor="" \
 + Revision: 643738
 - rebuild for new poppler
 
-* Sat Jan 15 2011 Götz Waschk <waschk@mandriva.org> 1.2.8.10-1
+* Sat Jan 15 2011 GÃ¶tz Waschk <waschk@mandriva.org> 1.2.8.10-1
 + Revision: 631125
 - update to new version 1.2.8.10
 
@@ -223,11 +223,11 @@ desktop-file-install --vendor="" \
 + Revision: 626160
 - rebuild for new poppler
 
-* Fri Dec 03 2010 Götz Waschk <waschk@mandriva.org> 1.2.8.9-2mdv2011.0
+* Fri Dec 03 2010 GÃ¶tz Waschk <waschk@mandriva.org> 1.2.8.9-2mdv2011.0
 + Revision: 607147
 - use new 1.2.8.9 tarball
 
-* Fri Dec 03 2010 Götz Waschk <waschk@mandriva.org> 1.2.8.9-1mdv2011.0
+* Fri Dec 03 2010 GÃ¶tz Waschk <waschk@mandriva.org> 1.2.8.9-1mdv2011.0
 + Revision: 606926
 - update to new version 1.2.8.9
 
@@ -235,11 +235,11 @@ desktop-file-install --vendor="" \
 + Revision: 604405
 - rebuild for new exiv2
 
-* Wed Nov 03 2010 Götz Waschk <waschk@mandriva.org> 1.2.8.8-2mdv2011.0
+* Wed Nov 03 2010 GÃ¶tz Waschk <waschk@mandriva.org> 1.2.8.8-2mdv2011.0
 + Revision: 593007
 - rebuild for new python 2.7
 
-* Fri Sep 10 2010 Götz Waschk <waschk@mandriva.org> 1.2.8.8-1mdv2011.0
+* Fri Sep 10 2010 GÃ¶tz Waschk <waschk@mandriva.org> 1.2.8.8-1mdv2011.0
 + Revision: 577027
 - update to new version 1.2.8.8
 
@@ -255,11 +255,11 @@ desktop-file-install --vendor="" \
 + Revision: 565539
 - rebuild for new exiv2
 
-* Tue Jul 27 2010 Götz Waschk <waschk@mandriva.org> 1.2.8.7-1mdv2011.0
+* Tue Jul 27 2010 GÃ¶tz Waschk <waschk@mandriva.org> 1.2.8.7-1mdv2011.0
 + Revision: 562083
 - update to new version 1.2.8.7
 
-* Sun Jul 11 2010 Götz Waschk <waschk@mandriva.org> 1.2.8.6-1mdv2011.0
+* Sun Jul 11 2010 GÃ¶tz Waschk <waschk@mandriva.org> 1.2.8.6-1mdv2011.0
 + Revision: 550776
 - update to new version 1.2.8.6
 
@@ -267,12 +267,12 @@ desktop-file-install --vendor="" \
 + Revision: 537373
 - rebuild
 
-* Sun Feb 14 2010 Götz Waschk <waschk@mandriva.org> 1.2.8.5-1mdv2010.1
+* Sun Feb 14 2010 GÃ¶tz Waschk <waschk@mandriva.org> 1.2.8.5-1mdv2010.1
 + Revision: 505793
 - new version
 - update the patch
 
-* Wed Jan 13 2010 Götz Waschk <waschk@mandriva.org> 1.2.8.4-3mdv2010.1
+* Wed Jan 13 2010 GÃ¶tz Waschk <waschk@mandriva.org> 1.2.8.4-3mdv2010.1
 + Revision: 490559
 - rebuild for new libjpeg
 
@@ -280,27 +280,27 @@ desktop-file-install --vendor="" \
 + Revision: 484196
 - Rebuild for new libexiv2
 
-* Thu Dec 03 2009 Götz Waschk <waschk@mandriva.org> 1.2.8.4-1mdv2010.1
+* Thu Dec 03 2009 GÃ¶tz Waschk <waschk@mandriva.org> 1.2.8.4-1mdv2010.1
 + Revision: 473092
 - update to new version 1.2.8.4
 
-* Fri Nov 06 2009 Götz Waschk <waschk@mandriva.org> 1.2.8.3-1mdv2010.1
+* Fri Nov 06 2009 GÃ¶tz Waschk <waschk@mandriva.org> 1.2.8.3-1mdv2010.1
 + Revision: 460928
 - update to new version 1.2.8.3
 
-* Tue Sep 22 2009 Götz Waschk <waschk@mandriva.org> 1.2.8.2-1mdv2010.0
+* Tue Sep 22 2009 GÃ¶tz Waschk <waschk@mandriva.org> 1.2.8.2-1mdv2010.0
 + Revision: 447526
 - update to new version 1.2.8.2
 
-* Sun Aug 16 2009 Götz Waschk <waschk@mandriva.org> 1.2.8.1-2mdv2010.0
+* Sun Aug 16 2009 GÃ¶tz Waschk <waschk@mandriva.org> 1.2.8.1-2mdv2010.0
 + Revision: 416882
 - rebuild for new libjpeg
 
-* Tue Aug 11 2009 Götz Waschk <waschk@mandriva.org> 1.2.8.1-1mdv2010.0
+* Tue Aug 11 2009 GÃ¶tz Waschk <waschk@mandriva.org> 1.2.8.1-1mdv2010.0
 + Revision: 414694
 - update to new version 1.2.8.1
 
-* Mon Jun 29 2009 Götz Waschk <waschk@mandriva.org> 1.2.8-1mdv2010.0
+* Mon Jun 29 2009 GÃ¶tz Waschk <waschk@mandriva.org> 1.2.8-1mdv2010.0
 + Revision: 390583
 - new version
 - rediff the patch
@@ -311,11 +311,11 @@ desktop-file-install --vendor="" \
 + Revision: 320291
 - fix str fmt
 
-* Sat Nov 08 2008 Götz Waschk <waschk@mandriva.org> 1.2.7-2mdv2009.1
+* Sat Nov 08 2008 GÃ¶tz Waschk <waschk@mandriva.org> 1.2.7-2mdv2009.1
 + Revision: 301106
 - rebuild for new libxcb
 
-* Mon Jul 28 2008 Götz Waschk <waschk@mandriva.org> 1.2.7-1mdv2009.0
+* Mon Jul 28 2008 GÃ¶tz Waschk <waschk@mandriva.org> 1.2.7-1mdv2009.0
 + Revision: 252057
 - new version
 
@@ -323,12 +323,12 @@ desktop-file-install --vendor="" \
     - rpm filetriggers deprecates update_menus/update_scrollkeeper/update_mime_database/update_icon_cache/update_desktop_database/post_install_gconf_schemas
     - adapt to %%_localstatedir now being /var instead of /var/lib (#22312)
 
-* Mon Jun 02 2008 Götz Waschk <waschk@mandriva.org> 1.2.6-1mdv2009.0
+* Mon Jun 02 2008 GÃ¶tz Waschk <waschk@mandriva.org> 1.2.6-1mdv2009.0
 + Revision: 214208
 - new version
 - disable --as-needed and --no-undefined to make it build
 
-* Sat Mar 01 2008 Götz Waschk <waschk@mandriva.org> 1.2.5-1mdv2008.1
+* Sat Mar 01 2008 GÃ¶tz Waschk <waschk@mandriva.org> 1.2.5-1mdv2008.1
 + Revision: 177245
 - new version
 - update buildrequires
@@ -342,72 +342,72 @@ desktop-file-install --vendor="" \
   + Olivier Blin <oblin@mandriva.com>
     - restore BuildRoot
 
-* Sat Jun 09 2007 Götz Waschk <waschk@mandriva.org> 1.2.4-1mdv2008.0
+* Sat Jun 09 2007 GÃ¶tz Waschk <waschk@mandriva.org> 1.2.4-1mdv2008.0
 + Revision: 37667
 - new version
 - fix buildrequires
 
 
-* Tue Dec 12 2006 Götz Waschk <waschk@mandriva.org> 1.2.3-1mdv2007.0
+* Tue Dec 12 2006 GÃ¶tz Waschk <waschk@mandriva.org> 1.2.3-1mdv2007.0
 + Revision: 95200
 - new version
 
-* Mon Dec 11 2006 Götz Waschk <waschk@mandriva.org> 1.2.2-2mdv2007.1
+* Mon Dec 11 2006 GÃ¶tz Waschk <waschk@mandriva.org> 1.2.2-2mdv2007.1
 + Revision: 94777
 - fix buildrequires
 
-* Mon Dec 11 2006 Götz Waschk <waschk@mandriva.org> 1.2.2-1mdv2007.1
+* Mon Dec 11 2006 GÃ¶tz Waschk <waschk@mandriva.org> 1.2.2-1mdv2007.1
 + Revision: 94666
 - new version
 
-* Wed Oct 18 2006 Götz Waschk <waschk@mandriva.org> 1.2.1-1mdv2007.0
+* Wed Oct 18 2006 GÃ¶tz Waschk <waschk@mandriva.org> 1.2.1-1mdv2007.0
 + Revision: 65795
 - new version
 - new version
 
-* Sun Oct 15 2006 Götz Waschk <waschk@mandriva.org> 1.2.1-0.20061010.1mdv2006.0
+* Sun Oct 15 2006 GÃ¶tz Waschk <waschk@mandriva.org> 1.2.1-0.20061010.1mdv2006.0
 + Revision: 64777
 - Import gnome-commander
 
-* Sat Oct 14 2006 G�tz Waschk <waschk@mandriva.org> 1.2.1-0.20061010.1mdv2007.1
+* Sat Oct 14 2006 Götz Waschk <waschk@mandriva.org> 1.2.1-0.20061010.1mdv2007.1
 - fix buildrequires
 - new snapshot
 
-* Sat Aug 05 2006 Götz Waschk <waschk@mandriva.org> 1.2.0-1mdv2007.0
+* Sat Aug 05 2006 GÃ¶tz Waschk <waschk@mandriva.org> 1.2.0-1mdv2007.0
 - rebuild for new dbus
 
-* Fri Jul 21 2006 G�tz Waschk <waschk@mandriva.org> 1.2.0-3mdv2007.0
+* Fri Jul 21 2006 Götz Waschk <waschk@mandriva.org> 1.2.0-3mdv2007.0
 - xdg menu
 
-* Thu May 11 2006 G�tz Waschk <waschk@mandriva.org> 1.2.0-2mdk
+* Thu May 11 2006 Götz Waschk <waschk@mandriva.org> 1.2.0-2mdk
 - fix buildrequires
 
 * Mon May 08 2006 Jerome Soyer <saispo@mandriva.org> 1.2.0-1mdk
 - New release 1.2.0
 
-* Mon Feb 13 2006 G�tz Waschk <waschk@mandriva.org> 1.1.7-1mdk
+* Mon Feb 13 2006 Götz Waschk <waschk@mandriva.org> 1.1.7-1mdk
 - drop patches
 - new version
 - new source URL
 
-* Wed Aug 10 2005 G�tz Waschk <waschk@mandriva.org> 1.1.6-6mdk
+* Wed Aug 10 2005 Götz Waschk <waschk@mandriva.org> 1.1.6-6mdk
 - fix build
 
-* Wed Jun 08 2005 G�tz Waschk <waschk@mandriva.org> 1.1.6-5mdk
+* Wed Jun 08 2005 Götz Waschk <waschk@mandriva.org> 1.1.6-5mdk
 - fix buildrequires
 
-* Tue Jun 07 2005 G�tz Waschk <waschk@mandriva.org> 1.1.6-4mdk
+* Tue Jun 07 2005 Götz Waschk <waschk@mandriva.org> 1.1.6-4mdk
 - patch for gcc 4
 
-* Sat May 07 2005 G�tz Waschk <waschk@mandriva.org> 1.1.6-3mdk
+* Sat May 07 2005 Götz Waschk <waschk@mandriva.org> 1.1.6-3mdk
 - fix build on x86_64
 
-* Wed May 05 2004 G�tz Waschk <waschk@linux-mandrake.com> 1.1.6-2mdk
+* Wed May 05 2004 Götz Waschk <waschk@linux-mandrake.com> 1.1.6-2mdk
 - patch from CVS to make it compile with gtk 2.4
 
-* Tue Jan 20 2004 G�tz Waschk <waschk@linux-mandrake.com> 1.1.6-1mdk
+* Tue Jan 20 2004 Götz Waschk <waschk@linux-mandrake.com> 1.1.6-1mdk
 - new version
 
-* Mon Jan 12 2004 G�tz Waschk <waschk@linux-mandrake.com> 1.1.5-1mdk
+* Mon Jan 12 2004 Götz Waschk <waschk@linux-mandrake.com> 1.1.5-1mdk
 - update file list
 - new version
