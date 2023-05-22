@@ -37,5 +37,5 @@ find $RPM_BUILD_ROOT -name '*.la' -exec rm -f {} ';'
 
 
 %changelog
-* Sat Jun 13 2015 Mank <mank dot pclos at gmail dot com> 0.7.0-2
+* Sat Jun 13 2015 Maniu <me  at maniu dot eu> 0.7.0-2
 - Init Spec
