@@ -120,7 +120,7 @@ rm -rf %{buildroot}
 
 
 %changelog
-* Wed May 25 2011 Mank <mank@no-ip.sk> 0.14.1-1pclinux2011.1
+* Wed May 25 2011 Mank <mank dot pclos@gmail.com> 0.14.1-1pclinux2011.1
 -	Build for PCLinuxOS
 * Sat Nov 27 2010 Zombie Ryushu <ryushu@mandriva.org> 0.14.1-1mdv2011.0
 + Revision: 601736
