@@ -1,7 +1,7 @@
 %define name	flare
 %define version	0.19git20160316
 %define release	%mkrel 1
-%define	Summary	A RPG clone with Smal code base
+%define	Summary	A RPG clone with Small code base
 
 Source0:	flare-game-master.zip
 Source1:    flare-engine-master.zip
@@ -16,7 +16,7 @@ License:	GPLv3
 Requires:	%{name}-data
 
 %description
-A RPG clone with Smal code base
+A RPG clone with Small code base
 
 %package data
 Summary:	%{Summary} Data Files
@@ -70,9 +70,9 @@ rm -rf %{buildroot}
 %{_datadir}/flare/*
 
 %changelog
-* Wed Mar 16 2016 Mank <Mank dot pclos at gmail dot com> 0.19-2016
+* Wed Mar 16 2016 Maniu <me  at maniu dot eu> 0.19-2016
 -	Build for PCLinuxOS (updated)
-* Wed Jun 15 2015 Mank <Mank dot pclos at gmail dot com> 0.19-1
+* Wed Jun 15 2015 Maniu <me  at maniu dot eu> 0.19-1
 -	Build for PCLinuxOS (updated)
-* Wed Jun 15 2013 Mank <Mank dot pclos at gmail dot com> 0.19-1
+* Wed Jun 15 2013 Maniu <me  at maniu dot eu> 0.19-1
 -	Build for PCLinuxOS
