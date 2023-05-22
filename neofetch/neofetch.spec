@@ -28,5 +28,5 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/neofetch/ascii/distro/*
 
 %changelog
-* Thu Feb  2 2017 mank
+* Thu Feb  2 2017 Maniu <me  at maniu dot eu>
 - 
